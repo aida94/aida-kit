@@ -1,0 +1,96 @@
+// Import custom.scss
+@import './../../custom.scss';
+
+.fa-2x {
+    font-size: 2em;
+}
+
+.fa {
+    position: relative;
+    display: table-cell;
+    width: 60px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    font-size:20px;
+}
+
+.main-menu {
+    background:white;
+    position:absolute;
+    box-shadow: 4px 0px 7px -6px #333;
+    top:5%;
+    bottom:0;
+    height:95%;
+    left:0;
+    width:200px;
+    overflow:hidden;
+    z-index:-1;
+
+    >ul {
+        margin:7px 0;
+    }
+
+    li {
+        position:relative;
+        display:block;
+        width:250px;
+
+        >a {
+            position:relative;
+            display:table;
+            border-collapse:collapse;
+            border-spacing:0;
+            color:#999;
+            font-family: arial;
+            font-size: 14px;
+            text-decoration:none;
+        }
+    }
+
+    .nav-icon {
+        position:relative;
+        display:table-cell;
+        width:60px;
+        height:36px;
+        text-align:center;
+        vertical-align:middle;
+        font-size:18px;
+    }
+
+    .nav-text {
+        position:relative;
+        display:table-cell;
+        vertical-align:middle;
+        width:100px;
+        text-align: left;
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+    li:hover>a,nav.main-menu li.active>a {
+        color:#fff;
+        background-color:#5fa2db;
+        width: 200px!important;
+    }
+}
+
+.mainSmall {
+    width:60px;
+}
+
+.main-menu>ul.logout {
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+
+a:hover,a:focus {
+    text-decoration:none;
+}
+
+nav ul,nav li {
+    outline:0;
+    margin:0;
+    padding:0;
+}
+
