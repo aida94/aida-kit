@@ -1,6 +1,7 @@
 // Import custom.scss
 @import './../../custom.scss';
 
+
 .fa-2x {
     font-size: 2em;
 }
@@ -67,7 +68,7 @@
         font-family: 'Titillium Web', sans-serif;
     }
 
-    li:hover>a,nav.main-menu li.active>a {
+    .sidemenu:hover>a {
         color:#fff;
         background-color:#5fa2db;
         width: 200px!important;
@@ -93,4 +94,30 @@ nav ul,nav li {
     margin:0;
     padding:0;
 }
+
+.drpComp {
+    padding:5px 60px;
+    background-color: whitesmoke;
+}
+.drpComp:hover {
+
+    background-color: gainsboro;
+}
+
+// style for container box
+.containerB {
+    float: right;
+    width: 95%;
+    position: relative;
+    box-shadow: -4px 0 5px -5px #333;
+    z-index:-2
+  }
+    
+  .containerS {
+    float: right;
+    width: 90%;
+    position: relative;
+    box-shadow: -4px 0 5px -5px #333;
+    z-index:-2
+  }
 

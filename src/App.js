@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.scss';
 import Navbar from './components/navbar/navbar';
-import Container from './components/container/container';
 import Sidebar from './components/sidebar/sidebar';
 
 class App extends Component {
@@ -20,13 +19,11 @@ class App extends Component {
 
   render() {
 
-
     return (
       <div className="App">
 
         <Navbar toggleSidebar={this.state.toggleSidebar} onChange={this.handleToggleChange}/>
         <Sidebar toggleSidebar={this.state.toggleSidebar}/>
-        <Container toggleSidebar={this.state.toggleSidebar}/>
 
       </div>
     );
