@@ -1,7 +1,3 @@
-// Import custom.scss
-@import './../../custom.scss';
-
-
 .fa-2x {
     font-size: 2em;
 }
@@ -20,9 +16,8 @@
     background:white;
     position:absolute;
     box-shadow: 4px 0px 7px -6px #333;
-    top:5%;
+    top:88px;
     bottom:0;
-    height:95%;
     left:0;
     width:200px;
     overflow:hidden;
@@ -105,19 +100,19 @@ nav ul,nav li {
 }
 
 // style for container box
+$a: 100vw;
+
 .containerB {
     float: right;
-    width: 95%;
+    width: calc(#{$a} - 70px);
     position: relative;
-    box-shadow: -4px 0 5px -5px #333;
     z-index:-2
   }
-    
+     
   .containerS {
     float: right;
-    width: 90%;
+    width: calc(#{$a} - 210px);
     position: relative;
-    box-shadow: -4px 0 5px -5px #333;
     z-index:-2
   }
 

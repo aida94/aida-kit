@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import './sidebar.scss';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Dashboard from './../dashboard/dashboard';
+import Utilities from '../utilities/utilities';
 import Documentation from './../documentation/documentation';
-import Button from './../button/button';
-import Cards from './../cards/cards';
-import Pages from './../pages/pages';
+
+import Button from './../components/buttons/button';
+import Cards from './../components/cards/cards';
+import Alerts from '../components/alerts/alerts';
 
 
 const routes = [
@@ -16,6 +18,13 @@ const routes = [
     icon: 'fa fa-user',
     showComponent: false,
     main: () => <Dashboard />
+  },
+  {
+    path: "/utilities",
+    name: "utilities",
+    icon: 'fa fa-user',
+    showComponent: false,
+    main: () => <Utilities />
   },
   {
     path: "/documentation",
@@ -39,11 +48,11 @@ const routes = [
     main: () => <Cards />
   },
   {
-    path: "/pages",
-    name: "pages",
+    path: "/alerts",
+    name: "alert",
     icon: 'fa fa-user',
     showComponent: true,
-    main: () => <Pages />
+    main: () => <Alerts />
   },
 ];
 
@@ -65,7 +74,14 @@ class Sidebar extends Component {
 
     let sidebarSize = this.props.toggleSidebar? "main-menu mainSmall":"main-menu";
     let conteinerSize = this.props.toggleSidebar? "containerB":"containerS";
-    let compDrp = this.state.componentsDrop? "inline" : "none";
+
+    let compDrp;
+    if(this.state.componentsDrop && !this.props.toggleSidebar){
+      compDrp = "inline";
+    }else {
+      compDrp = "none"
+    }
+
 
     let compTog = '';
     if (routes.length > 0){
@@ -83,7 +99,7 @@ class Sidebar extends Component {
         <Router>
           <nav className={sidebarSize}>
             <ul>
-              <li className="sidemenu mt-5">
+              <li className="sidemenu mt-2">
                 <Link to='/'> <i className="fa fa-home fa-2x" />
                   <span className="nav-text">
                       Dashboard
@@ -91,19 +107,20 @@ class Sidebar extends Component {
                 </Link>
               </li>
               <li className="sidemenu" onClick={this.handleCompDrop}>
-                <a href="#1">
+
+                <Link to={this.props.toggleSidebar ? '/pages' : '#'}>
                   <i className="fa fa-list fa-2x" />
                   <span className="nav-text">
-                      Components
+                    Components
                   </span>
                   <i className={compTog} />
-                </a>
+                </Link>
                 <ul style={{display: compDrp }}>
 
                   {routes.filter(elem => elem.showComponent)
                     .map((route, index) => 
                       <li key={index} className="drpComp">
-                        <Link to={route.path}>
+                        <Link to={route.path} onClick={(e) => e.stopPropagation()}>
                           <span className="">
                             {route.name}
                           </span>
@@ -114,10 +131,10 @@ class Sidebar extends Component {
                 </ul>
               </li>
               <li className="sidemenu">
-                <Link to='/pages'> 
+                <Link to='/utilities'> 
                   <i className="fa fa-folder-open fa-2x" />
                   <span className="nav-text">
-                    Pages
+                    Utilities
                   </span>
                 </Link>
               </li>
@@ -133,12 +150,12 @@ class Sidebar extends Component {
 
             <ul className="logout">
               <li>
-                <a href="#1">
-                  <i className="fa fa-power-off fa-2x" />
-                  <span className="nav-text">
-                      Logout
-                  </span>
-                </a>
+              <Link to='/login'> 
+                <i className="fa fa-power-off fa-2x" />
+                <span className="nav-text">
+                  Log out
+                </span>
+              </Link>
               </li>  
             </ul>
           </nav>

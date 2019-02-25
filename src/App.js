@@ -3,6 +3,7 @@ import './App.scss';
 import Navbar from './components/navbar/navbar';
 import Sidebar from './components/sidebar/sidebar';
 
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -19,9 +20,10 @@ class App extends Component {
 
   render() {
 
+
     return (
       <div className="App">
-
+ 
         <Navbar toggleSidebar={this.state.toggleSidebar} onChange={this.handleToggleChange}/>
         <Sidebar toggleSidebar={this.state.toggleSidebar}/>
 
