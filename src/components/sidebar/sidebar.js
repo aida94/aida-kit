@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './sidebar.scss';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import Dashboard from './../dashboard/dashboard';
 import Utilities from '../utilities/utilities';
 import Documentation from './../documentation/documentation';
@@ -21,6 +21,7 @@ const routes = [
   },
   {
     path: "/utilities",
+    exact: false,
     name: "utilities",
     icon: 'fa fa-user',
     showComponent: false,
@@ -28,6 +29,7 @@ const routes = [
   },
   {
     path: "/documentation",
+    exact: false,
     name: "documentation",
     icon: 'fa fa-user',
     showComponent: false,
@@ -35,6 +37,7 @@ const routes = [
   },
   {
     path: "/button",
+    exact: false,
     name: "button",
     icon: 'fa fa-user',
     showComponent: true,
@@ -42,6 +45,7 @@ const routes = [
   },
   {
     path: "/cards",
+    exact: false,
     name: "cards",
     icon: 'fa fa-user',
     showComponent: true,
@@ -49,6 +53,7 @@ const routes = [
   },
   {
     path: "/alerts",
+    exact: false,
     name: "alert",
     icon: 'fa fa-user',
     showComponent: true,
@@ -72,16 +77,15 @@ class Sidebar extends Component {
 
   render() {
 
-    let sidebarSize = this.props.toggleSidebar? "main-menu mainSmall":"main-menu";
-    let conteinerSize = this.props.toggleSidebar? "containerB":"containerS";
+    let sidebarSize = this.props.toggleSidebar? "main-menu ":"main-menu mainSmall";
+    let conteinerSize = this.props.toggleSidebar? "containerS":"containerB";
 
     let compDrp;
-    if(this.state.componentsDrop && !this.props.toggleSidebar){
+    if(this.state.componentsDrop && this.props.toggleSidebar){
       compDrp = "inline";
     }else {
       compDrp = "none"
     }
-
 
     let compTog = '';
     if (routes.length > 0){
@@ -99,63 +103,64 @@ class Sidebar extends Component {
         <Router>
           <nav className={sidebarSize}>
             <ul>
-              <li className="sidemenu mt-2">
-                <Link to='/'> <i className="fa fa-home fa-2x" />
+              <li className="sidemenu mt-4">
+                <NavLink exact to='/' activeStyle={{backgroundColor: '#999', color: 'white' }}>  
+                  <i className="fa fa-home fa-2x" />
                   <span className="nav-text">
                       Dashboard
                   </span>
-                </Link>
+                </NavLink>
               </li>
               <li className="sidemenu" onClick={this.handleCompDrop}>
 
-                <Link to={this.props.toggleSidebar ? '/pages' : '#'}>
+                <NavLink to={this.props.toggleSidebar ? '#' : '/pages'} activeStyle={{backgroundColor: '#999', color: 'white' }}> 
                   <i className="fa fa-list fa-2x" />
                   <span className="nav-text">
                     Components
                   </span>
                   <i className={compTog} />
-                </Link>
+                </NavLink>
                 <ul style={{display: compDrp }}>
 
                   {routes.filter(elem => elem.showComponent)
                     .map((route, index) => 
                       <li key={index} className="drpComp">
-                        <Link to={route.path} onClick={(e) => e.stopPropagation()}>
+                        <NavLink to={route.path} onClick={(e) => e.stopPropagation()} activeStyle={{backgroundColor: '#999', color: 'white' }}> 
                           <span className="">
                             {route.name}
                           </span>
 
-                        </Link>
+                        </NavLink>
                       </li>)}
 
                 </ul>
               </li>
               <li className="sidemenu">
-                <Link to='/utilities'> 
+                <NavLink to='/utilities' activeStyle={{backgroundColor: '#999', color: 'white' }}> 
                   <i className="fa fa-folder-open fa-2x" />
                   <span className="nav-text">
                     Utilities
                   </span>
-                </Link>
+                </NavLink>
               </li>
               <li className="sidemenu">
-                <Link to='/documentation'> 
+                <NavLink to='/documentation' activeStyle={{backgroundColor: '#999', color: 'white' }}> 
                   <i className="fa fa-info fa-2x" />
                   <span className="nav-text">
                     Documentation
                   </span>
-                </Link>
+                </NavLink>
               </li>
             </ul>
 
             <ul className="logout">
               <li>
-              <Link to='/login'> 
+              <NavLink to='/login' activeStyle={{backgroundColor: '#999', color: 'white' }}> 
                 <i className="fa fa-power-off fa-2x" />
                 <span className="nav-text">
                   Log out
                 </span>
-              </Link>
+              </NavLink>
               </li>  
             </ul>
           </nav>

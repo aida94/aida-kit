@@ -5,7 +5,7 @@ class Utilities extends Component {
   render() {
 
     return (
-      <div className="utilities">
+      <div className="utilities ml-md-4 ">
 
         <section className="mb-5" id="border">
           <h3>Border</h3>

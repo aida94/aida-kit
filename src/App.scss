@@ -114,20 +114,20 @@ body {
     margin-top:0px ;
   }
 
-  div {
-    display: block;
+div {
+  display: block;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  body {
+      margin-top:0px ;
+  }
 }
   
-  /* On screens that are 992px or less, set the background color to blue */
-  @media screen and (max-width: 992px) {
-    body {
-        margin-top:0px ;
-    }
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  body {
+      margin-top:0px ;
   }
-  
-  /* On screens that are 600px or less, set the background color to olive */
-  @media screen and (max-width: 600px) {
-    body {
-        margin-top:0px ;
-    }
-  }
+}
