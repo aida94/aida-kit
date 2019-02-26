@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.scss';
+import { BrowserRouter } from "react-router-dom";
 import Navbar from './components/navbar/navbar';
 import Sidebar from './components/sidebar/sidebar';
 
@@ -22,12 +23,14 @@ class App extends Component {
 
 
     return (
-      <div className="App">
- 
-        <Navbar toggleSidebar={this.state.toggleSidebar} onChange={this.handleToggleChange}/>
-        <Sidebar toggleSidebar={this.state.toggleSidebar}/>
+      <BrowserRouter>
+        <div className="App">
+  
+          <Navbar toggleSidebar={this.state.toggleSidebar} onChange={this.handleToggleChange}/>
+          <Sidebar toggleSidebar={this.state.toggleSidebar}/>
 
-      </div>
+        </div>
+      </BrowserRouter>
     );
   }
 }

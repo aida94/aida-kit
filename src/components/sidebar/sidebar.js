@@ -1,65 +1,10 @@
 import React, { Component } from 'react';
 import './sidebar.scss';
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-import Dashboard from './../dashboard/dashboard';
-import Utilities from '../utilities/utilities';
-import Documentation from './../documentation/documentation';
-
-import Button from './../components/buttons/button';
-import Cards from './../components/cards/cards';
-import Alerts from '../components/alerts/alerts';
+import DataComponent  from './../data.js';
 
 
-const routes = [
-  {
-    path: "/",
-    exact: true,
-    name: "dashboard",
-    icon: 'fa fa-user',
-    showComponent: false,
-    main: () => <Dashboard />
-  },
-  {
-    path: "/utilities",
-    exact: false,
-    name: "utilities",
-    icon: 'fa fa-user',
-    showComponent: false,
-    main: () => <Utilities />
-  },
-  {
-    path: "/documentation",
-    exact: false,
-    name: "documentation",
-    icon: 'fa fa-user',
-    showComponent: false,
-    main: () => <Documentation />
-  },
-  {
-    path: "/button",
-    exact: false,
-    name: "button",
-    icon: 'fa fa-user',
-    showComponent: true,
-    main: () => <Button/>
-  },
-  {
-    path: "/cards",
-    exact: false,
-    name: "cards",
-    icon: 'fa fa-user',
-    showComponent: true,
-    main: () => <Cards />
-  },
-  {
-    path: "/alerts",
-    exact: false,
-    name: "alert",
-    icon: 'fa fa-user',
-    showComponent: true,
-    main: () => <Alerts />
-  },
-];
+const routes = DataComponent;
 
 class Sidebar extends Component {
   constructor(props){
@@ -76,7 +21,7 @@ class Sidebar extends Component {
   }
 
   render() {
-
+    
     let sidebarSize = this.props.toggleSidebar? "main-menu ":"main-menu mainSmall";
     let conteinerSize = this.props.toggleSidebar? "containerS":"containerB";
 
@@ -113,7 +58,7 @@ class Sidebar extends Component {
               </li>
               <li className="sidemenu" onClick={this.handleCompDrop}>
 
-                <NavLink to={this.props.toggleSidebar ? '#' : '/pages'} activeStyle={{backgroundColor: '#999', color: 'white' }}> 
+                <NavLink to={this.props.toggleSidebar ? '#' : '/components'} activeStyle={{backgroundColor: '#999', color: 'white' }}> 
                   <i className="fa fa-list fa-2x" />
                   <span className="nav-text">
                     Components
