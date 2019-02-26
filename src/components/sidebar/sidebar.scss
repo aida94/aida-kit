@@ -1,3 +1,5 @@
+@import './../../App.scss';
+
 .fa-2x {
     font-size: 2em;
 }
@@ -14,9 +16,9 @@
 
 .main-menu {
     background:white;
-    position:absolute;
+    position:fixed;
     box-shadow: 4px 0px 7px -6px #333;
-    top:88px;
+    top:55px;
     bottom:0;
     left:0;
     width:200px;
@@ -37,7 +39,7 @@
             display:table;
             border-collapse:collapse;
             border-spacing:0;
-            color:#999;
+            color:$secondary;
             font-family: arial;
             font-size: 14px;
             text-decoration:none;
@@ -65,7 +67,7 @@
 
     .sidemenu:hover>a {
         color:#fff;
-        background-color:#5fa2db;
+        background-color:$secondary;
         width: 200px!important;
     }
 }
@@ -104,15 +106,21 @@ $a: 100vw;
 
 .containerB {
     float: right;
-    width: calc(#{$a} - 70px);
+    width: calc(#{$a} - 90px);
+    top:55px;
     position: relative;
     z-index:-2
   }
      
   .containerS {
     float: right;
-    width: calc(#{$a} - 210px);
+    width: calc(#{$a} - 230px);
+    top:55px;
     position: relative;
     z-index:-2
+  }
+
+  .footer {
+    height: 30px;
   }
 

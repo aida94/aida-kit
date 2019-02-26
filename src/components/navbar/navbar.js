@@ -9,10 +9,14 @@ class Navbar extends Component {
       searchIcon: false,
       userProfile:false
     }
+    
+    this.searchRef = React.createRef();
+    this.toggleRef = React.createRef();
 
     this.handleToggleBar = this.handleToggleBar.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleUserProfile = this.handleUserProfile.bind(this)
+    this.onClickOutsideHandler = this.onClickOutsideHandler.bind(this);
   }
 
   handleToggleBar(){
@@ -27,6 +31,22 @@ class Navbar extends Component {
     this.setState({ userProfile: !this.state.userProfile})
   }
 
+  componentDidMount() {
+    window.addEventListener('click', this.onClickOutsideHandler);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('click', this.onClickOutsideHandler);
+  }
+
+  onClickOutsideHandler(event) {
+    if (this.state.userProfile && !this.toggleRef.current.contains(event.target) ){
+      this.setState({ userProfile: false });
+    } 
+    else if (this.state.searchIcon && !this.searchRef.current.contains(event.target) ){
+      this.setState({ searchIcon: false });
+    }
+  }
 
   render() {
 
@@ -38,13 +58,13 @@ class Navbar extends Component {
 
       <nav className="navbar navbar-expand-lg navbar-light bg-light" id="tobar">
         <i className={toggleIcon} onClick={this.handleToggleBar} />
-        <a className="navbar-brand" href="#11"> Navbar</a>
+        <a className="navbar-brand d-none d-lg-block" href="#11"> Navbar</a>
 
-        <div className="navbar ml-auto">
+        <div className="navbar_right ">
           <ul className="navbar-nav">
-            <li className="nav-item d-none d-lg-block">
+            <li className="nav-item d-none d-lg-block" ref={this.searchRef}>
             <form className="form-inline my-2 my-lg-0">
-              <input className="inp" type="search" placeholder="Search" aria-label="Search" style={{visibility: searchIcon}}/>
+              <input  className="inp" type="search" placeholder="Search" aria-label="Search" style={{visibility: searchIcon}}/>
               <i className='fa fa-search searchBtn' onClick={this.handleSearch} />
               {/* <button className="bttn" type="submit"></button> */}
             </form>
@@ -52,7 +72,7 @@ class Navbar extends Component {
             <li className="nav-item d-none d-lg-block">
               <img className="" style={{width: 40}} src={userImage} alt="user"/>
             </li>
-            <li className="nav-item dropdown">
+            <li className="nav-item dropdown" ref={this.toggleRef}>
               <a className="nav-link dropdown-toggle dropbtn" href="#11" onClick={this.handleUserProfile }>
                 User Name
               </a>

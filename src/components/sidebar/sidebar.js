@@ -162,6 +162,7 @@ class Sidebar extends Component {
 
           <main className={`${conteinerSize} mt-4`} >
             {routes.map((route, index) => ( <Route key={index} path={route.path} exact={route.exact} component={route.main}/> ))}
+            <div className="footer" ></div>
           </main>
               
         </Router>
