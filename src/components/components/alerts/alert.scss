@@ -1,0 +1,18 @@
+@import './../../../App.scss';
+
+
+.colorIcon {
+    background-color:rgba(255, 255, 255, 0.2);
+    color:white;
+    display: inline;
+    border-radius: 0.25rem;
+    padding: 1rem 1.25rem;
+    margin-left:-1.25rem;
+}
+
+.borderIcon {
+    color:white;
+    display: inline;
+    padding: 0.95rem 1.25rem 0.75rem 1.25rem;
+    margin-left:-1.25rem;
+}

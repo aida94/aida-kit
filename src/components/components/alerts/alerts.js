@@ -3,75 +3,110 @@ import Alert from './alert';
 
 class Alerts extends Component {
 
-  render() {
+
+  render() {  
+
+    let basic = [
+      'alert bg-info',
+      'alert bg-danger',
+      'alert bg-success',
+      'alert bg-secondary',
+      'alert bg-warning'
+    ];
+    
+    let colorIcon= [
+      { class: 'alert bg-info',
+        icon: 'fa fa-info colorIcon' },
+      { class: 'alert bg-danger ',
+        icon: 'fa fa-times colorIcon' },
+      { class: 'alert bg-success',
+        icon: 'fa fa-thumbs-up colorIcon' },
+      { class: 'alert bg-secondary',
+        icon: 'fa fa-check colorIcon' },
+      { class: 'alert bg-warning',
+        icon: 'fa fa-exclamation colorIcon' },
+    ]
+
+    let borderIcon= [
+      { class: 'alert border-info',
+        icon: 'fa fa-info borderIcon bg-info' },
+      { class: 'alert border-danger ',
+        icon: 'fa fa-times borderIcon bg-danger' },
+      { class: 'alert border-success',
+        icon: 'fa fa-thumbs-up borderIcon bg-success' },
+      { class: 'alert border-secondary',
+        icon: 'fa fa-check borderIcon bg-secondary' },
+      { class: 'alert border-warning',
+        icon: 'fa fa-exclamation borderIcon bg-warning' },
+    ]
+
+    let neutralColor= [
+      { class: 'alert border-info',
+        icon: 'fa fa-info borderIcon text-info' },
+      { class: 'alert border-danger ',
+        icon: 'fa fa-times borderIcon text-danger' },
+      { class: 'alert border-success',
+        icon: 'fa fa-thumbs-up borderIcon text-success' },
+      { class: 'alert border-secondary',
+        icon: 'fa fa-check borderIcon text-secondary' },
+      { class: 'alert border-warning',
+        icon: 'fa fa-exclamation borderIcon text-warning' },
+    ]
 
     return (
-        <React.Fragment>
-            <div className="container m-5"> 
-
-                <div className="row ">
-                    <div className="col-6 p-3">
-                        <Alert class="alert alert-primary"> 
-                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                            <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </Alert>
-
-                        <Alert class="alert alert-secondary" />
-                        <Alert class="alert alert-warning " />
-                        <Alert class="alert alert-primary" />
-                        <Alert class="alert alert-primary" />
-                    </div>
-                    <div className="col-6 p-3">
-                        <Alert class="alert alert-primary"> 
-                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                            <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </Alert>
-
-                        <Alert class="alert alert-secondary" />
-                        <Alert class="alert alert-warning " />
-                        <Alert class="alert alert-primary" />
-                        <Alert class="alert alert-primary" />
-                    </div>
-                </div>
-
-                <div className="row">
-                    <div className="col-6">
-                        <Alert class="alert alert-primary"> 
-                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                            <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </Alert>
-
-                        <Alert class="alert alert-secondary" />
-                        <Alert class="alert alert-warning " />
-                        <Alert class="alert alert-primary" />
-                        <Alert class="alert alert-primary" />
-                    </div>
-                    <div className="col-6">
-                        <Alert class="alert alert-primary"> 
-                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                            <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </Alert>
-
-                        <Alert class="alert alert-secondary" />
-                        <Alert class="alert alert-warning " />
-                        <Alert class="alert alert-primary" />
-                        <Alert class="alert alert-primary" />
-                    </div>
-                </div>
-           
-            
-            </div>
-            
-        </React.Fragment>
         
+      <div className="alert ">
+        <section className="mb-5" id="alert">
+
+          <h3>Alerts</h3>
+          <p>Use this elements, if you want to show some hints or additional information</p>
+
+          <div className=" row mx-2 p-2">
+            <div className="col-md-6 mb-4">
+              <p className="font-weight-bold">BASIC ALERTS</p>
+                {basic.map((basic, index) => (
+                  <Alert key={index} className={basic}>
+                    This is a '{basic}' !
+                  </Alert>
+                ))}
+            </div>
+
+            <div className="col-md-6 mb-4">
+              <p className="font-weight-bold">COLORED ALERTS WITH ICONS</p>
+                {colorIcon.map((variant, idx) => (
+                  <Alert key={idx} className={variant.class}>
+                    <i className={variant.icon}></i> 
+                    <span className="ml-2"> This is a '{variant.class}' !</span>
+                  </Alert>
+                ))}
+            </div>
+          </div>
+
+          <div className=" row mx-3 p-3">
+            <div className="col-md-6 mb-4">
+              <p className="font-weight-bold">BORDERED ALERTS WITH ICONS</p>
+                {borderIcon.map((variant, idx) => (
+                  <Alert key={idx} className={variant.class}>
+                    <i className={variant.icon}></i> 
+                    <span className="ml-2"> This is a '{variant.class}' !</span>
+                  </Alert>
+                ))}
+            </div>
+
+            <div className="col-md-6 mb-4">
+              <p className="font-weight-bold">NEUTRAL ALERTS WITH ICONS</p>
+                {neutralColor.map((variant, idx) => (
+                  <Alert key={idx} className={variant.class}>
+                    <i className={variant.icon}></i> 
+                    <span className="ml-2"> This is a '{variant.class}' !</span>
+                  </Alert>
+                ))}
+            </div>
+          </div>
+
+        </section>
+      </div>
+            
     );
   }
 }
