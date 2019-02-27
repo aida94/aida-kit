@@ -3,7 +3,9 @@ import './App.scss';
 import { BrowserRouter } from "react-router-dom";
 import Navbar from './components/navbar/navbar';
 import Sidebar from './components/sidebar/sidebar';
+import CompData from './CompData';
 
+const routeData = CompData;
 
 class App extends Component {
   constructor(props){
@@ -26,8 +28,8 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
   
-          <Navbar toggleSidebar={this.state.toggleSidebar} onChange={this.handleToggleChange}/>
-          <Sidebar toggleSidebar={this.state.toggleSidebar}/>
+          <Navbar toggleSidebar={this.state.toggleSidebar} onChange={this.handleToggleChange} routes={routeData}/>
+          <Sidebar toggleSidebar={this.state.toggleSidebar} routes={routeData}/>
 
         </div>
       </BrowserRouter>

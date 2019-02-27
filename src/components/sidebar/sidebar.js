@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import './sidebar.scss';
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-import DataComponent  from './../data.js';
 
-
-const routes = DataComponent;
 
 class Sidebar extends Component {
   constructor(props){
@@ -37,16 +34,17 @@ class Sidebar extends Component {
   }
 
   render() {
+    let routes = this.props.routes;
     
     let sidebarSize = this.props.toggleSidebar? "main-menu ":"main-menu mainSmall";
     let conteinerSize = this.props.toggleSidebar? "containerS":"containerB";
 
     let compDrp = 'none';
-    let aida = 'none';
+    let compDrpS = 'none';
     if(this.state.componentsDrop && this.props.toggleSidebar){
       compDrp = "inline";
     } else if(this.state.componentsDrop && !this.props.toggleSidebar){
-      aida = "inline"
+      compDrpS = "inline"
     }
 
     let compTog = '';
@@ -95,7 +93,7 @@ class Sidebar extends Component {
                       </li>)}
                 </ul>
 
-                <ul style={{display: aida}} className="drop-content" onClick={(e) => e.stopPropagation()}>
+                <ul style={{display: compDrpS}} className="drop-content" onClick={(e) => e.stopPropagation()}>
                   {routes.filter(elem => elem.showComponent)
                     .map((route, index) => 
                       <NavLink key={index} to={route.path} onClick={(e) => e.stopPropagation()} activeStyle={{}}> 
