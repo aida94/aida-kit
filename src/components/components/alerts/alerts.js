@@ -2,19 +2,16 @@ import React, { Component } from 'react';
 import Alert from './alert';
 
 class Alerts extends Component {
-
-
-  render() {  
-
-    let basic = [
+  render() {
+    const basic = [
       'alert bg-info',
       'alert bg-danger',
       'alert bg-success',
       'alert bg-secondary',
-      'alert bg-warning'
+      'alert bg-warning',
     ];
-    
-    let colorIcon= [
+
+    const colorIcon = [
       { class: 'alert bg-info',
         icon: 'fa fa-info colorIcon' },
       { class: 'alert bg-danger ',
@@ -25,9 +22,9 @@ class Alerts extends Component {
         icon: 'fa fa-check colorIcon' },
       { class: 'alert bg-warning',
         icon: 'fa fa-exclamation colorIcon' },
-    ]
+    ];
 
-    let borderIcon= [
+    const borderIcon = [
       { class: 'alert border-info',
         icon: 'fa fa-info borderIcon bg-info' },
       { class: 'alert border-danger ',
@@ -38,9 +35,9 @@ class Alerts extends Component {
         icon: 'fa fa-check borderIcon bg-secondary' },
       { class: 'alert border-warning',
         icon: 'fa fa-exclamation borderIcon bg-warning' },
-    ]
+    ];
 
-    let neutralColor= [
+    const neutralColor = [
       { class: 'alert border-info',
         icon: 'fa fa-info borderIcon text-info' },
       { class: 'alert border-danger ',
@@ -51,10 +48,10 @@ class Alerts extends Component {
         icon: 'fa fa-check borderIcon text-secondary' },
       { class: 'alert border-warning',
         icon: 'fa fa-exclamation borderIcon text-warning' },
-    ]
+    ];
 
     return (
-        
+
       <div className="alert ">
         <section className="mb-5" id="alert">
 
@@ -75,7 +72,7 @@ class Alerts extends Component {
               <p className="font-weight-bold">COLORED ALERTS WITH ICONS</p>
                 {colorIcon.map((variant, idx) => (
                   <Alert key={idx} className={variant.class}>
-                    <i className={variant.icon}></i> 
+                    <i className={variant.icon}></i>
                     <span className="ml-2"> This is a '{variant.class}' !</span>
                   </Alert>
                 ))}
@@ -87,7 +84,7 @@ class Alerts extends Component {
               <p className="font-weight-bold">BORDERED ALERTS WITH ICONS</p>
                 {borderIcon.map((variant, idx) => (
                   <Alert key={idx} className={variant.class}>
-                    <i className={variant.icon}></i> 
+                    <i className={variant.icon}></i>
                     <span className="ml-2"> This is a '{variant.class}' !</span>
                   </Alert>
                 ))}
@@ -97,7 +94,7 @@ class Alerts extends Component {
               <p className="font-weight-bold">NEUTRAL ALERTS WITH ICONS</p>
                 {neutralColor.map((variant, idx) => (
                   <Alert key={idx} className={variant.class}>
-                    <i className={variant.icon}></i> 
+                    <i className={variant.icon}></i>
                     <span className="ml-2"> This is a '{variant.class}' !</span>
                   </Alert>
                 ))}
@@ -106,7 +103,7 @@ class Alerts extends Component {
 
         </section>
       </div>
-            
+
     );
   }
 }
