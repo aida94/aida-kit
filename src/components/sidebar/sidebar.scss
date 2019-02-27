@@ -74,6 +74,17 @@
 
 .mainSmall {
     width:60px;
+
+    .sidemenu:hover>a {
+        color:#fff;
+        background-color:$secondary;
+        width: 220px!important;
+       
+    }
+}
+
+.mainSmallDRP {
+    width:200px;
 }
 
 .main-menu>ul.logout {
@@ -124,6 +135,31 @@ $a: 100vw;
     height: 30px;
   }
 
+
+  .drop-content {
+    position: fixed;
+    background-color: white;
+    width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    text-align: left;
+    margin-top: -36px;
+    margin-left: 60px;
+    z-index: 100;
+
+        a {
+            color: $secondary;
+            padding: 7px 15px;
+            text-decoration: none;
+            display: block;
+        }
+        a:hover {
+            background-color: $lightgray;
+            color: black;
+            text-decoration:none;
+        }
+  }
+  
+  .drop-content {display: block;}
 
   @media screen and (max-width: 800px) {
     .containerS {

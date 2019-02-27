@@ -77,12 +77,6 @@
   }
   
 // user profile dropdown  
-  .dropbtn {
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
   
   .dropdown {
     position: relative;
@@ -90,15 +84,14 @@
   }
   
   .dropdown-content {
-    display: none;
     position: absolute;
-    background-color: white;
+    background-color:white;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    margin-top:15px;
+    margin-top: 8px;
     text-align: left;
-    margin-left: -90px;
-    z-index: -1;
+    margin-left: -50px;
+    z-index: -1 ;
 
         a {
             color: $secondary;

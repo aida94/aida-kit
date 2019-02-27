@@ -1,6 +1,5 @@
 import React from 'react';
 import Dashboard from "./dashboard/dashboard";
-import Components from './components/components';
 import Utilities from './utilities/utilities';
 import Documentation from './documentation/documentation';
 import Button from './components/buttons/button';
@@ -17,14 +16,6 @@ const DataComponent =
             icon: 'fa fa-user',
             showComponent: false,
             main: () => <Dashboard />
-        },
-        {
-            path: '/components',
-            exact: false,
-            name: 'Components',
-            icon: 'fa fa-user',
-            showComponent: false,
-            main: () => <Components />
         },
         {
             path: '/utilities',
