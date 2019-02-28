@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './sidebar.scss';
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 
 
 class Sidebar extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       componentsDrop: false,
-    }
+    };
     this.toggleRef = React.createRef();
 
     this.handleCompDrop = this.handleCompDrop.bind(this);
@@ -16,7 +16,7 @@ class Sidebar extends Component {
   }
   
   handleCompDrop() {
-    this.setState({componentsDrop: !this.state.componentsDrop});
+    this.setState({ componentsDrop: !this.state.componentsDrop });
   }
 
   componentDidMount() {
@@ -28,34 +28,35 @@ class Sidebar extends Component {
   }
 
   onClickOutsideHandler(event) {
-    if (this.state.componentsDrop && !this.toggleRef.current.contains(event.target) ){
+    if (this.state.componentsDrop && !this.toggleRef.current.contains(event.target)) {
       this.setState({ componentsDrop: false });
     } 
   }
 
   render() {
-    let routes = this.props.routes;
+    // eslint-disable-next-line prefer-destructuring
+    const routes = this.props.routes;
     
-    let sidebarSize = this.props.toggleSidebar? "main-menu ":"main-menu mainSmall";
-    let conteinerSize = this.props.toggleSidebar? "containerS":"containerB";
+    const sidebarSize = this.props.toggleSidebar ? 'main-menu ' : 'main-menu mainSmall';
+    const conteinerSize = this.props.toggleSidebar ? 'containerS' : 'containerB';
 
     let compDrp = 'none';
     let compDrpS = 'none';
-    if(this.state.componentsDrop && this.props.toggleSidebar){
-      compDrp = "inline";
-    } else if(this.state.componentsDrop && !this.props.toggleSidebar){
-      compDrpS = "inline"
+    if (this.state.componentsDrop && this.props.toggleSidebar) {
+      compDrp = 'inline';
+    } else if (this.state.componentsDrop && !this.props.toggleSidebar) {
+      compDrpS = 'inline';
     }
 
     let compTog = '';
-    if (routes.length > 0){
-      if(!this.state.componentsDrop){
-        compTog = "fa fa-angle-right";
-      }else {
-        compTog = "fa fa-angle-down";
+    if (routes.length > 0) {
+      if (!this.state.componentsDrop) {
+        compTog = 'fa fa-angle-right';
+      } else {
+        compTog = 'fa fa-angle-down';
       }
     } else {
-      compTog = "fa";
+      compTog = 'fa';
     }
 
     return (
@@ -63,71 +64,68 @@ class Sidebar extends Component {
         <Router>
           <nav className={sidebarSize}>
             <ul>
-              <li className="sidemenu mt-4">
-                <NavLink exact to='/' activeStyle={{backgroundColor: '#999', color: 'white',width: '200px' }}>  
-                  <i className="fa fa-home fa-2x" />
-                  <span className="nav-text">
+              <li className='sidemenu mt-4'>
+                <NavLink exact to='/' activeStyle={{ backgroundColor: '#999', color: 'white', width: '200px' }}>  
+                  <i className='fa fa-home fa-2x' />
+                  <span className='nav-text'>
                       Dashboard
                   </span>
                 </NavLink>
               </li>
 
-              <li className="sidemenu" onClick={this.handleCompDrop} ref={this.toggleRef} >
+              <li className='sidemenu' onClick={this.handleCompDrop} ref={this.toggleRef} >
                 <NavLink to='alerts' > 
-                  <i className="fa fa-list fa-2x" />
-                  <span className="nav-text">
+                  <i className='fa fa-list fa-2x' />
+                  <span className='nav-text'>
                     Components
                   </span>
                   <i className={compTog} />
                 </NavLink>
                 
-                <ul style={{display: compDrp }}>
+                <ul style={{ display: compDrp }}>
                   {routes.filter(elem => elem.showComponent)
-                    .map((route, index) => 
-                      <li key={index} className="drpComp">
-                        <NavLink to={route.path} onClick={(e) => e.stopPropagation()} activeStyle={{}}> 
-                          <span className="">
+                    .map((route, index) => <li key={index} className='drpComp'>
+                        <NavLink to={route.path} onClick={e => e.stopPropagation()} activeStyle={{}}> 
+                          <span className=''>
                             {route.name}
                           </span>
                         </NavLink>
                       </li>)}
                 </ul>
 
-                <ul style={{display: compDrpS}} className="drop-content" onClick={(e) => e.stopPropagation()}>
+                <ul style={{ display: compDrpS }} className='drop-content' onClick={e => e.stopPropagation()}>
                   {routes.filter(elem => elem.showComponent)
-                    .map((route, index) => 
-                      <NavLink key={index} to={route.path} onClick={(e) => e.stopPropagation()} activeStyle={{}}> 
-                        <span className="">
+                    .map((route, index) => <NavLink key={index} to={route.path} onClick={e => e.stopPropagation()} activeStyle={{}}> 
+                        <span className=''>
                           {route.name}
                         </span>
-                      </NavLink>
-                    )}
+                      </NavLink>)}
                 </ul>
 
               </li>
-              <li className="sidemenu">
-                <NavLink to='/utilities' activeStyle={{backgroundColor: '#999', color: 'white',width: '200px' }}> 
-                  <i className="fa fa-folder-open fa-2x" />
-                  <span className="nav-text">
+              <li className='sidemenu'>
+                <NavLink to='/utilities' activeStyle={{ backgroundColor: '#999', color: 'white', width: '200px' }}> 
+                  <i className='fa fa-folder-open fa-2x' />
+                  <span className='nav-text'>
                     Utilities
                   </span>
                 </NavLink>
               </li>
-              <li className="sidemenu">
-                <NavLink to='/documentation' activeStyle={{backgroundColor: '#999', color: 'white',width: '200px' }}> 
-                  <i className="fa fa-info fa-2x" />
-                  <span className="nav-text">
+              <li className='sidemenu'>
+                <NavLink to='/documentation' activeStyle={{ backgroundColor: '#999', color: 'white', width: '200px' }}> 
+                  <i className='fa fa-info fa-2x' />
+                  <span className='nav-text'>
                     Documentation
                   </span>
                 </NavLink>
               </li>
             </ul>
 
-            <ul className="logout">
+            <ul className='logout'>
               <li>
-              <NavLink to='/login' activeStyle={{backgroundColor: '#999', color: 'white', width: '200px' }}> 
-                <i className="fa fa-power-off fa-2x" />
-                <span className="nav-text">
+              <NavLink to='/login' activeStyle={{ backgroundColor: '#999', color: 'white', width: '200px' }}> 
+                <i className='fa fa-power-off fa-2x' />
+                <span className='nav-text'>
                   Log out
                 </span>
               </NavLink>
@@ -136,8 +134,8 @@ class Sidebar extends Component {
           </nav>
 
           <main className={`${conteinerSize} mt-4`} >
-            {routes.map((route, index) => ( <Route key={index} path={route.path} exact={route.exact} component={route.main}/> ))}
-            <div className="footer" ></div>
+            {routes.map((route, index) => (<Route key={index} path={route.path} exact={route.exact} component={route.main}/>))}
+            <div className='footer' ></div>
           </main>
               
         </Router>

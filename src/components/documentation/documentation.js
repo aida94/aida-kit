@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 
 class Documentation extends Component {
-
   render() {
-
     return (
-      <div className="Documentation">
+      <div className='Documentation'>
 
         DOCUMENTATION <br />
 

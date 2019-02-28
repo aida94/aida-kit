@@ -14,10 +14,10 @@ class Alert extends Component {
     return (
 
       <div>
-        <p className={`${this.props.className}`} role="alert" hidden={this.state.show ? 'hidden' : ''} >
+        <p className={`${this.props.className}`} role='alert' hidden={this.state.show ? 'hidden' : ''} >
           {this.props.children}
-          <button type="button" className="close" data-dismiss="alert" aria-label="Close" onClick={handleHide}>
-            <span aria-hidden="true">&times;</span>
+          <button type='button' className='close' data-dismiss='alert' aria-label='Close' onClick={handleHide}>
+            <span aria-hidden='true'>&times;</span>
           </button>
 
         </p>

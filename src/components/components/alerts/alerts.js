@@ -52,15 +52,15 @@ class Alerts extends Component {
 
     return (
 
-      <div className="alert ">
-        <section className="mb-5" id="alert">
+      <div className='alert '>
+        <section className='mb-5' id='alert'>
 
           <h3>Alerts</h3>
           <p>Use this elements, if you want to show some hints or additional information</p>
 
-          <div className=" row mx-2 p-2">
-            <div className="col-md-6 mb-4">
-              <p className="font-weight-bold">BASIC ALERTS</p>
+          <div className=' row mx-2 p-2'>
+            <div className='col-md-6 mb-4'>
+              <p className='font-weight-bold'>BASIC ALERTS</p>
                 {basic.map((basic, index) => (
                   <Alert key={index} className={basic}>
                     This is a '{basic}' !
@@ -68,34 +68,34 @@ class Alerts extends Component {
                 ))}
             </div>
 
-            <div className="col-md-6 mb-4">
-              <p className="font-weight-bold">COLORED ALERTS WITH ICONS</p>
+            <div className='col-md-6 mb-4'>
+              <p className='font-weight-bold'>COLORED ALERTS WITH ICONS</p>
                 {colorIcon.map((variant, idx) => (
                   <Alert key={idx} className={variant.class}>
                     <i className={variant.icon}></i>
-                    <span className="ml-2"> This is a '{variant.class}' !</span>
+                    <span className='ml-2'> This is a '{variant.class}' !</span>
                   </Alert>
                 ))}
             </div>
           </div>
 
-          <div className=" row mx-3 p-3">
-            <div className="col-md-6 mb-4">
-              <p className="font-weight-bold">BORDERED ALERTS WITH ICONS</p>
+          <div className=' row mx-3 p-3'>
+            <div className='col-md-6 mb-4'>
+              <p className='font-weight-bold'>BORDERED ALERTS WITH ICONS</p>
                 {borderIcon.map((variant, idx) => (
                   <Alert key={idx} className={variant.class}>
                     <i className={variant.icon}></i>
-                    <span className="ml-2"> This is a '{variant.class}' !</span>
+                    <span className='ml-2'> This is a '{variant.class}' !</span>
                   </Alert>
                 ))}
             </div>
 
-            <div className="col-md-6 mb-4">
-              <p className="font-weight-bold">NEUTRAL ALERTS WITH ICONS</p>
+            <div className='col-md-6 mb-4'>
+              <p className='font-weight-bold'>NEUTRAL ALERTS WITH ICONS</p>
                 {neutralColor.map((variant, idx) => (
                   <Alert key={idx} className={variant.class}>
                     <i className={variant.icon}></i>
-                    <span className="ml-2"> This is a '{variant.class}' !</span>
+                    <span className='ml-2'> This is a '{variant.class}' !</span>
                   </Alert>
                 ))}
             </div>
