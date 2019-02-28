@@ -2,9 +2,9 @@ import React from 'react';
 import Dashboard from './components/dashboard/dashboard';
 import Utilities from './components/utilities/utilities';
 import Documentation from './components/documentation/documentation';
-import Buttons from './components/components/buttons/buttons';
-import Cards from './components/components/cards/cards';
 import Alerts from './components/components/alerts/alerts';
+import Buttons from './components/components/buttons/buttons';
+import Carousels from './components/components/carousels/carousels';
 
 
 const CompData = [
@@ -49,12 +49,12 @@ const CompData = [
     main: () => <Buttons/>,
   },
   {
-    path: '/cards',
+    path: '/carousels',
     exact: false,
-    name: 'Cards',
+    name: 'Carousels',
     icon: 'fa fa-user',
     showComponent: true,
-    main: () => <Cards />,
+    main: () => <Carousels/>,
   },
 
 ];
