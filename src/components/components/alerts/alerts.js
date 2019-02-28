@@ -4,7 +4,7 @@ import Alert from './alert';
 class Alerts extends Component {
   render() {
     const basic = [
-      'alert bg-info',
+      'alert bg-primary',
       'alert bg-danger',
       'alert bg-success',
       'alert bg-secondary',
@@ -13,7 +13,7 @@ class Alerts extends Component {
     
     const colorIcon = [
       { 
-        class: 'alert bg-info',
+        class: 'alert bg-primary',
         icon: 'fa fa-info colorIcon', 
       },
       { 
@@ -36,8 +36,8 @@ class Alerts extends Component {
 
     const borderIcon = [
       { 
-        class: 'alert border-info',
-        icon: 'fa fa-info borderIcon bg-info', 
+        class: 'alert border-primary',
+        icon: 'fa fa-info borderIcon bg-primary', 
       },
       { 
         class: 'alert border-danger ',
@@ -59,8 +59,8 @@ class Alerts extends Component {
 
     const neutralColor = [
       { 
-        class: 'alert border-info',
-        icon: 'fa fa-info borderIcon text-info', 
+        class: 'alert border-primary',
+        icon: 'fa fa-info borderIcon text-primary', 
       },
       { 
         class: 'alert border-danger ',
@@ -86,7 +86,7 @@ class Alerts extends Component {
         <section className='mb-5' id='alert'>
 
           <h3>Alerts</h3>
-          <p>Use this elements, if you want to show some hints or additional information</p>
+          <p>Use this elements, if you want to show some hints or additional primaryrmation</p>
 
           <div className='row mx-2 p-2'>
             <div className='col-md-6 mb-4'>

@@ -2,109 +2,25 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
 // color varilabe
+$bodyColor:#F2F4F7;
+$textGray: #999;
+$boxShadow: #ced4da;
 $lightgray: #F1F1F2;
 $darkgray: darkgray;
+
 $primary: #ffccbb;
 $primarydark: #f7b8a2;
-$info:#17a2b8;
-$infodark:#006c84;
-$secondary:#999;
-$secondarydark: #6c757d;
-$success:#98DBC6;
-$successdark:#80BD9E;
-$danger:#e7472e;
-$dangerdark:#b43b28;
-$warning:#F4CC70;
-$warningdark:#D9B44A;
+$info: #70bbfd;
+$infodark: #3ea3fc;
+$secondary:#e7e2e2;
+$secondarydark: #d0c6c6;
+$success:#4ce1b6;
+$successdark:#24d6a3;
+$danger:#ff4861;
+$dangerdark:#ff1535;
+$warning:#f6da6e;
+$warningdark:#f3ce3e;
 
-
-.text-primary{
-  color: $primary !important;
-}
-a.text-primary:hover {
-  color: $primarydark !important;
-}
-.border-primary {
-  border-color: $primary !important;
-}
-.bg-primary {
-  background-color: $primary !important;
-}
-
-
-
-.text-info {
-  color: $info !important;
-}
-a.text-info:hover {
-  color: $infodark !important;
-}
-.border-info {
-  border-color: $info !important;
-}
-.bg-info {
-  background-color: $info !important;
-}
-
-
-
-.text-secondary {
-  color: $secondary !important;
-}
-a.text-secondary:hover {
-  color: $secondarydark !important;
-}
-.border-secondary {
-  border-color: $secondary !important;
-}
-.bg-secondary {
-  background-color: $secondary !important;
-}
-
-
-
-.text-success {
-  color: $success !important;
-}
-a.text-success:hover{
-  color: $successdark !important;
-}
-.border-success {
-  border-color: $success !important;
-}
-.bg-success {
-  background-color: $success !important;
-}
-
-
-
-.text-danger {
-  color: $danger !important ;
-}
-a.text-danger:hover {
-  color: $dangerdark !important ;
-}
-.border-danger {
-  border-color: $danger !important;
-}
-.bg-danger {
-  background-color: $danger !important;
-}
-
-
-
-.text-warning {
-  color: $warning !important;
-}
-a.text-warning:hover {
-  color: $warningdark !important;
-}
-.border-warning {
-  border-color: $warning !important;
-}
-.bg-warning {
-  background-color: $warning !important;
-}
 
 
 
@@ -112,6 +28,7 @@ a.text-warning:hover {
 /* Set the background color of body to tan */
 body {
     margin-top:0px ;
+    background-color: $bodyColor;
   }
 
 div {

@@ -17,7 +17,7 @@
 .main-menu {
     background:white;
     position:fixed;
-    box-shadow: 4px 0px 7px -6px #333;
+    box-shadow: 0px 0px 10px 0px $boxShadow;
     top:55px;
     bottom:0;
     left:0;
@@ -39,7 +39,7 @@
             display:table;
             border-collapse:collapse;
             border-spacing:0;
-            color:$secondary;
+            color:$textGray;
             font-family: arial;
             font-size: 14px;
             text-decoration:none;
@@ -67,7 +67,7 @@
 
     .sidemenu:hover>a {
         color:#fff;
-        background-color:$secondary;
+        background-color: $textGray;
         width: 200px!important;
     }
 }
@@ -77,7 +77,7 @@
 
     .sidemenu:hover>a {
         color:#fff;
-        background-color:$secondary;
+        background-color: $textGray;
         width: 220px!important;
        
     }
@@ -147,7 +147,7 @@ $a: 100vw;
     z-index: 100;
 
         a {
-            color: $secondary;
+            color: $textGray;
             padding: 7px 15px;
             text-decoration: none;
             display: block;
