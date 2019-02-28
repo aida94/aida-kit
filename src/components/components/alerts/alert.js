@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './alert.scss';
+import './alerts.scss';
 
 class Alert extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class Alert extends Component {
           <button type='button' className='close' data-dismiss='alert' aria-label='Close' onClick={handleHide}>
             <span aria-hidden='true'>&times;</span>
           </button>
-
+          
         </p>
         {this.state.show && <p onClick={handleShow}>Show Alert</p>}
       </div>

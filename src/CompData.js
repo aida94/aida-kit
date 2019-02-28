@@ -2,7 +2,7 @@ import React from 'react';
 import Dashboard from './components/dashboard/dashboard';
 import Utilities from './components/utilities/utilities';
 import Documentation from './components/documentation/documentation';
-import Button from './components/components/buttons/button';
+import Buttons from './components/components/buttons/buttons';
 import Cards from './components/components/cards/cards';
 import Alerts from './components/components/alerts/alerts';
 
@@ -41,12 +41,12 @@ const CompData = [
     main: () => <Alerts />,
   },
   {
-    path: '/button',
+    path: '/buttons',
     exact: false,
     name: 'Button',
     icon: 'fa fa-user',
     showComponent: true,
-    main: () => <Button/>,
+    main: () => <Buttons/>,
   },
   {
     path: '/cards',
@@ -59,5 +59,5 @@ const CompData = [
 
 ];
 
-
+  
 export default CompData;

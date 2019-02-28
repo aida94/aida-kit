@@ -74,7 +74,7 @@ class Sidebar extends Component {
               </li>
 
               <li className='sidemenu' onClick={this.handleCompDrop} ref={this.toggleRef} >
-                <NavLink to='alerts' > 
+                <NavLink to='#' > 
                   <i className='fa fa-list fa-2x' />
                   <span className='nav-text'>
                     Components
