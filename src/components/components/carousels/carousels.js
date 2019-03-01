@@ -4,11 +4,11 @@ import { Carousel } from 'react-responsive-carousel';
 
 // import Carousel from './carousel';
 import './carousels.scss';
-import img1 from '../../../images/3.png';
-import img2 from '../../../images/2.png';
-import img3 from '../../../images/4.png';
-import img4 from '../../../images/5.png';
-import img5 from '../../../images/6.png';
+import img1 from '../../../images/img1.jfif';
+import img2 from '../../../images/img2.jfif';
+import img3 from '../../../images/img3.jfif';
+import img4 from '../../../images/img4.jfif';
+import img5 from '../../../images/img5.jfif';
 
 
 class Carousels extends Component {
@@ -49,9 +49,9 @@ class Carousels extends Component {
           <p>Use this elements, if you want to show some hints or additional information</p>
 
           <div className='row'>
-            <div className='col-md-4 mb-4'>
+            <div className='col-md-6 col-lg-4 mb-4'>
               <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Default carousel</p>
+                <p className='font-weight-bold'>Default Carousel</p>
                 <Carousel showThumbs={false}>
                   {slides.map((slide, index) => (
                     <div key={index}>
@@ -62,9 +62,9 @@ class Carousels extends Component {
                 </Carousel>
               </div>
             </div>
-            <div className='col-md-4 mb-4'>
+            <div className='col-md-6 col-lg-4 mb-4'>
               <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>With Transition Time</p>
+                <p className='font-weight-bold'>Carousel with Transition Time</p>
                 <Carousel transitionTime={1000} showThumbs={false}>
                   {slides.map((slide, index) => (
                     <div key={index}>
@@ -75,9 +75,9 @@ class Carousels extends Component {
                 </Carousel>
               </div>
             </div>
-            <div className='col-md-4 mb-4'>
+            <div className='col-md-8 offset-md-2 col-lg-4 offset-lg-0 mb-4'>
               <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Autoplay with no array</p>
+                <p className='font-weight-bold'>Autoplay with no Arrow</p>
                 <Carousel autoPlay interval={1500} infiniteLoop showThumbs={false} showArrows={false} >
                   {slides.map((slide, index) => (
                     <div key={index}>
@@ -92,9 +92,9 @@ class Carousels extends Component {
 
 
           <div className='row'>
-            <div className='col-md-5 offset-md-1 mb-4'>
+            <div className='col-md-6 col-lg-5 offset-lg-1 mb-4'>
               <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Center mode, with Thumbs and no Indicators</p>
+                <p className='font-weight-bold'>Center Mode, with Thumbs and no Indicators</p>
                 <Carousel centerMode showIndicators={false}>
                   {slides.map((slide, index) => (
                     <div key={index}>
@@ -105,7 +105,7 @@ class Carousels extends Component {
                 </Carousel>
               </div>
             </div>
-            <div className='col-md-5  mb-4'>
+            <div className='col-md-6 col-lg-5  mb-4'>
               <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
                 <p className='font-weight-bold'>Center Slide %, with Thumbs and EmulateTouch</p>
                 <Carousel centerMode centerSlidePercentage={50} emulateTouch showThumbs={true}>

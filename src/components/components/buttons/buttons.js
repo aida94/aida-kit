@@ -6,52 +6,52 @@ class Buttons extends Component {
     const basic = [
       {
         name: 'primary',
-        class: 'btn btnWidth text-white bg-primary mr-1 mb-2',
+        class: 'btn text-white btn-primary mr-1 mb-2',
         icon: 'fa fa-info btnIcon',
       },
       {
         name: 'success',
-        class: 'btn btnWidth text-white bg-success mr-1 mb-2',
+        class: 'btn text-white btn-success mr-1 mb-2',
         icon: 'fa fa-thumbs-up btnIcon',
       },
       {
         name: 'danger',
-        class: 'btn btnWidth text-white bg-danger mr-1 mb-2',
+        class: 'btn btn-danger mr-1 mb-2',
         icon: 'fa fa-times btnIcon',
       },
       {
         name: 'warning',
-        class: 'btn btnWidth text-white bg-warning mr-1 mb-2',
+        class: 'btn text-white btn-warning mr-1 mb-2',
         icon: 'fa fa-exclamation btnIcon',
       },
       {
         name: 'secondary',
-        class: 'btn btnWidth text-white bg-secondary mr-1 mb-2',
+        class: 'btn btn-secondary mr-1 mb-2',
         icon: 'fa fa-check btnIcon',
       },
       {
         name: 'primary',
-        class: 'btn btnWidth btn-outline-primary mr-1 mb-2',
+        class: 'btn btn-outline-primary mr-1 mb-2',
         icon: '',
       },
       {
         name: 'success',
-        class: 'btn btnWidth btn-outline-success mr-1 mb-2',
+        class: 'btn btn-outline-success mr-1 mb-2',
         icon: '', 
       },
       {
         name: 'danger',
-        class: 'btn btnWidth btn-outline-danger mr-1 mb-2',
+        class: 'btn btn-outline-danger mr-1 mb-2',
         icon: '',
       },
       {
         name: 'warning',
-        class: 'btn btnWidth btn-outline-warning mr-1 mb-2',
+        class: 'btn btn-outline-warning mr-1 mb-2',
         icon: '',
       },
       // {
       //   name: 'info',
-      //   class: 'btn btnWidth btn-outline-light mr-1 mb-2',
+      //   class: 'btn btn-outline-light mr-1 mb-2',
       //   icon: '', 
       // },
       
@@ -64,10 +64,10 @@ class Buttons extends Component {
           <h3>Buttons</h3>
           <p>Use this elements, if you want to show some hints or additional information</p>
 
-          <div className='row mb-5'>
-            <div className='col-md-6'>
+          <div className='row'>
+            <div className='col-md-6 mb-5'>
               <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>DEFAULT BUTTONS</p>
+                <p className='font-weight-bold'>Default Buttons</p>
                   {basic.map((basic, index) => (
                     <Button key={index} className={basic.class}>
                       {basic.name}
@@ -76,9 +76,9 @@ class Buttons extends Component {
               </div>
             </div>
             
-            <div className='col-md-6'>
+            <div className='col-md-6 mb-5'>
               <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>BUTTONS ICON</p>
+                <p className='font-weight-bold'>Button Icons</p>
                   {basic.slice(0, 5).map((basic, index) => (
                     <Button key={index} className={`${basic.class}`}>
                       <i className={basic.icon}></i>
@@ -89,10 +89,10 @@ class Buttons extends Component {
             </div>
           </div>
 
-          <div className='row mb-5'>
-            <div className='col-md-6'>
+          <div className='row'>
+            <div className='col-md-6 mb-5'>
               <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>SQUARE BUTTONS</p>
+                <p className='font-weight-bold'>Square Buttons</p>
                   {basic.map((basic, index) => (
                     <Button key={index} className={`${basic.class} squarebtn`}>
                       {basic.name}
@@ -101,9 +101,9 @@ class Buttons extends Component {
               </div>
             </div>
             
-            <div className='col-md-6'>
+            <div className='col-md-6 mb-5'>
               <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>ROUNDED BUTTONS</p>
+                <p className='font-weight-bold'>Rounded Buttons</p>
                   {basic.map((basic, index) => (
                     <Button key={index} className={`${basic.class} rounded-pill`}>
                       {basic.name}
@@ -113,8 +113,8 @@ class Buttons extends Component {
             </div>
           </div>
 
-          <div className='row mb-5'>
-            <div className='col-12'>
+          <div className='row'>
+            <div className='col-12 mb-5'>
               <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
                 <p className='font-weight-bold'>Small buttons</p>
                   {basic.map((basic, index) => (

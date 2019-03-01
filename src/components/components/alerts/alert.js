@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './alerts.scss';
+import Button from '../buttons/button';
 
 class Alert extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class Alert extends Component {
           </button>
           
         </p>
-        {this.state.show && <p onClick={handleShow}>Show Alert</p>}
+        {this.state.show && <p onClick={handleShow}> <Button className='btn text-white bg-primary'>Show Alert</Button></p>}
       </div>
 
     );
