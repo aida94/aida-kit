@@ -11,7 +11,7 @@ class Navbar extends Component {
     };
     
     this.searchRef = React.createRef();
-    this.toggleRef = React.createRef();
+    this.userRef = React.createRef();
 
     this.handleToggleBar = this.handleToggleBar.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
@@ -40,7 +40,7 @@ class Navbar extends Component {
   }
 
   onClickOutsideHandler(event) {
-    if (this.state.userProfile && !this.toggleRef.current.contains(event.target)) {
+    if (this.state.userProfile && !this.userRef.current.contains(event.target)) {
       this.setState({ userProfile: false });
     } else if (this.state.searchIcon && !this.searchRef.current.contains(event.target)) {
       this.setState({ searchIcon: false });
@@ -70,11 +70,11 @@ class Navbar extends Component {
             <li className='nav-item d-none d-lg-block'>
               <img className='' style={{ width: 40 }} src={userImage} alt='user'/>
             </li>
-            <li className='nav-item dropdown' ref={this.toggleRef}>
-              <a className='nav-link dropdown-toggle dropbtn' href='#11' onClick={this.handleUserProfile }>
+            <li className='nav-item dropdown' ref={this.userRef}>
+              <a className='nav-link dropdown-toggle' href='#11' onClick={this.handleUserProfile }>
                 User Name
               </a>
-              <div className='dropdown-content' style={{ display: userProfile }}>
+              <div className='drpNavbar' style={{ display: userProfile }}>
                 <a className='' href='#11'>My profile</a>
                 <a className='' href='#11'>Calendar</a>
                 <a className='' href='#11'>Notifications</a>

@@ -77,7 +77,7 @@ class Carousels extends Component {
             </div>
             <div className='col-md-4 mb-4'>
               <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Autoplay</p>
+                <p className='font-weight-bold'>Autoplay with no array</p>
                 <Carousel autoPlay interval={1500} infiniteLoop showThumbs={false} showArrows={false} >
                   {slides.map((slide, index) => (
                     <div key={index}>

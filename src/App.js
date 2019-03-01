@@ -5,6 +5,7 @@ import Navbar from './components/navbar/navbar';
 import Sidebar from './components/sidebar/sidebar';
 import CompData from './CompData';
 
+// data object with all routes for each component
 const routeData = CompData;
 
 class App extends Component {

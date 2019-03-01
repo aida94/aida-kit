@@ -7,6 +7,7 @@ import Buttons from './components/components/buttons/buttons';
 import Carousels from './components/components/carousels/carousels';
 
 
+// data object with all routes for each component
 const CompData = [
   {
     path: '/',

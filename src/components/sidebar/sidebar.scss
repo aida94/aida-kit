@@ -1,8 +1,5 @@
 @import './../../App.scss';
 
-.fa-2x {
-    font-size: 2em;
-}
 
 .fa {
     position: relative;
@@ -66,8 +63,7 @@
     }
 
     .sidemenu:hover>a {
-        color:#fff;
-        background-color: $textGray;
+        background-color: $lightgray;
         width: 200px!important;
     }
 }
@@ -76,8 +72,7 @@
     width:60px;
 
     .sidemenu:hover>a {
-        color:#fff;
-        background-color: $textGray;
+        background-color: $lightgray;
         width: 220px!important;
        
     }
@@ -103,13 +98,13 @@ nav ul,nav li {
     padding:0;
 }
 
-.drpComp {
+.drpCompDown {
     padding:5px 60px;
-    background-color: whitesmoke;
+    background-color: #fafafa;
 }
-.drpComp:hover {
+.drpCompDown:hover {
 
-    background-color: gainsboro;
+    background-color: #e7e2e2;
 }
 
 // style for container box
@@ -136,7 +131,7 @@ $a: 100vw;
   }
 
 
-  .drop-content {
+  .drpCompRight {
     position: fixed;
     background-color: white;
     width: 150px;
@@ -159,7 +154,7 @@ $a: 100vw;
         }
   }
   
-  .drop-content {display: block;}
+  .drpCompRight {display: block;}
 
   @media screen and (max-width: 800px) {
     .containerS {

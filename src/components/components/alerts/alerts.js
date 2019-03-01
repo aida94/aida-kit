@@ -6,27 +6,27 @@ class Alerts extends Component {
     const colorAlert = [
       { 
         name: 'bg-primary',
-        class: 'alert bg-primary text-white',
+        class: 'alert alert-primary text-white',
         icon: 'fa fa-info colorIcon', 
       },
       { 
         name: 'bg-danger',
-        class: 'alert bg-danger text-white',
+        class: 'alert alert-danger text-white',
         icon: 'fa fa-times colorIcon', 
       },
       { 
         name: 'bg-success',
-        class: 'alert bg-success text-white',
+        class: 'alert alert-success text-white',
         icon: 'fa fa-thumbs-up colorIcon', 
       },
       { 
         name: 'bg-secondary',
-        class: 'alert bg-secondary text-white',
+        class: 'alert alert-secondary text-white',
         icon: 'fa fa-check colorIcon', 
       },
       { 
         name: 'bg-warning',
-        class: 'alert bg-warning text-white',
+        class: 'alert alert-warning text-white',
         icon: 'fa fa-exclamation colorIcon', 
       },
     ];
