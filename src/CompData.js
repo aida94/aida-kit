@@ -6,6 +6,7 @@ import Alerts from './components/components/alerts/alerts';
 import Buttons from './components/components/buttons/buttons';
 import Carousels from './components/components/carousels/carousels';
 import Collapses from './components/components/collapses/collapses';
+import Dropdowns from './components/components/dropdowns/dropdowns';
 
 
 // data object with all routes for each component
@@ -65,6 +66,14 @@ const CompData = [
     icon: 'fa fa-user',
     showComponent: true,
     main: () => <Collapses/>,
+  },
+  {
+    path: '/dropdowns',
+    exact: false,
+    name: 'DropDowns',
+    icon: 'fa fa-user',
+    showComponent: true,
+    main: () => <Dropdowns/>,
   },
 
 ];

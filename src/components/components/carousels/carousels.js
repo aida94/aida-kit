@@ -43,7 +43,7 @@ class Carousels extends Component {
 
     return (
 
-      <div className='' id='alerts'>
+      <div className='' id='carousels'>
         <section className='mx-3 mt-1 mb-4'>
           <h3>Carousel</h3>
           <p>Use this elements, if you want to show some hints or additional information</p>
@@ -56,7 +56,7 @@ class Carousels extends Component {
                   {slides.map((slide, index) => (
                     <div key={index}>
                       <img src={slide.src} alt={slide.alt} />
-                      <p className="legend">{slide.caption}</p>
+                      <p className='legend'>{slide.caption}</p>
                     </div>
                   ))}
                 </Carousel>
@@ -69,7 +69,7 @@ class Carousels extends Component {
                   {slides.map((slide, index) => (
                     <div key={index}>
                       <img src={slide.src} alt={slide.alt} />
-                      <p className="legend">{slide.caption}</p>
+                      <p className='legend'>{slide.caption}</p>
                     </div>
                   ))}
                 </Carousel>
@@ -82,7 +82,7 @@ class Carousels extends Component {
                   {slides.map((slide, index) => (
                     <div key={index}>
                       <img src={slide.src} alt={slide.alt} />
-                      <p className="legend">{slide.caption}</p>
+                      <p className='legend'>{slide.caption}</p>
                     </div>
                   ))}
                 </Carousel>
@@ -99,7 +99,7 @@ class Carousels extends Component {
                   {slides.map((slide, index) => (
                     <div key={index}>
                       <img src={slide.src} alt={slide.alt} />
-                      <p className="legend">{slide.caption}</p>
+                      <p className='legend'>{slide.caption}</p>
                     </div>
                   ))}
                 </Carousel>
@@ -112,7 +112,7 @@ class Carousels extends Component {
                   {slides.map((slide, index) => (
                     <div key={index}>
                       <img src={slide.src} alt={slide.alt} />
-                      <p className="legend">{slide.caption}</p>
+                      <p className='legend'>{slide.caption}</p>
                     </div>
                   ))}
                 </Carousel>

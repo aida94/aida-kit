@@ -5,7 +5,7 @@ class Collapses extends Component {
   render() {
     return (
 
-      <div className='' id='alerts'>
+      <div className='' id='collapses'>
         <section className='mx-3 mt-1 mb-4'>
           <h3>Collapse</h3>
           <p>Toggle the visibility of content across your project with a few classes and our JavaScript plugins.</p>
