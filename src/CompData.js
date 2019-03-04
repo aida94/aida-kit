@@ -7,6 +7,7 @@ import Buttons from './components/components/buttons/buttons';
 import Carousels from './components/components/carousels/carousels';
 import Collapses from './components/components/collapses/collapses';
 import Dropdowns from './components/components/dropdowns/dropdowns';
+import Forms from './components/components/forms/forms';
 
 
 // data object with all routes for each component
@@ -74,6 +75,14 @@ const CompData = [
     icon: 'fa fa-user',
     showComponent: true,
     main: () => <Dropdowns/>,
+  },
+  {
+    path: '/forms',
+    exact: false,
+    name: 'Forms',
+    icon: 'fa fa-user',
+    showComponent: true,
+    main: () => <Forms/>,
   },
 
 ];
