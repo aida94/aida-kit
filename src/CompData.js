@@ -5,9 +5,15 @@ import Documentation from './components/documentation/documentation';
 import Alerts from './components/components/alerts/alerts';
 import Buttons from './components/components/buttons/buttons';
 import Carousels from './components/components/carousels/carousels';
+import Charts from './components/components/charts/charts';
 import Collapses from './components/components/collapses/collapses';
 import Dropdowns from './components/components/dropdowns/dropdowns';
 import Forms from './components/components/forms/forms';
+import Modals from './components/components/modals/modals';
+import Notifications from './components/components/notifications/notifications';
+import Panels from './components/components/panels/panels';
+import Tables from './components/components/tables/tables';
+import Tabs from './components/components/tabs/tabs';
 
 
 // data object with all routes for each component
@@ -61,6 +67,14 @@ const CompData = [
     main: () => <Carousels/>,
   },
   {
+    path: '/charts',
+    exact: false,
+    name: 'Charts',
+    icon: 'fa fa-user',
+    showComponent: true,
+    main: () => <Charts/>,
+  },
+  {
     path: '/collapses',
     exact: false,
     name: 'Collapses',
@@ -83,6 +97,46 @@ const CompData = [
     icon: 'fa fa-user',
     showComponent: true,
     main: () => <Forms/>,
+  },
+  {
+    path: '/modals',
+    exact: false,
+    name: 'Modals',
+    icon: 'fa fa-user',
+    showComponent: true,
+    main: () => <Modals/>,
+  },
+  {
+    path: '/notifications',
+    exact: false,
+    name: 'Notifications',
+    icon: 'fa fa-user',
+    showComponent: true,
+    main: () => <Notifications/>,
+  },
+  {
+    path: '/panels',
+    exact: false,
+    name: 'Panels',
+    icon: 'fa fa-user',
+    showComponent: true,
+    main: () => <Panels/>,
+  },
+  {
+    path: '/tables',
+    exact: false,
+    name: 'Tables',
+    icon: 'fa fa-user',
+    showComponent: true,
+    main: () => <Tables/>,
+  },
+  {
+    path: '/tabs',
+    exact: false,
+    name: 'Tabs',
+    icon: 'fa fa-user',
+    showComponent: true,
+    main: () => <Tabs/>,
   },
 
 ];

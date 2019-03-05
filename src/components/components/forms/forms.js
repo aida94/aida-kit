@@ -26,6 +26,14 @@ class Forms extends Component {
             </div>
           </div>
 
+          <div className='row'>            
+            <div className='col-md-12 mb-5'>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
+                <p className='font-weight-bold'>Wizard form</p>
+              </div>
+            </div>
+          </div>
+
         </section>
       </div>
             
