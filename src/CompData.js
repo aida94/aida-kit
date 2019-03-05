@@ -14,6 +14,7 @@ import Notifications from './components/components/notifications/notifications';
 import Panels from './components/components/panels/panels';
 import Tables from './components/components/tables/tables';
 import Tabs from './components/components/tabs/tabs';
+import Tpp from './components/components/tool&prog&pop/tpp';
 
 
 // data object with all routes for each component
@@ -137,6 +138,14 @@ const CompData = [
     icon: 'fa fa-user',
     showComponent: true,
     main: () => <Tabs/>,
+  },
+  {
+    path: '/other',
+    exact: false,
+    name: 'Other Components',
+    icon: 'fa fa-user',
+    showComponent: true,
+    main: () => <Tpp />,
   },
 
 ];

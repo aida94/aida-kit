@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Tabs extends Component {
   render() {
     return (
-      <div className='' id='alerts'>
+      <div className='' id='tabs'>
         <section className='mx-3 mt-1 mb-4'>
           <h3>Tabs</h3>
           <p>Use this elements, if you want to show some hints or additional primaryrmation</p>
