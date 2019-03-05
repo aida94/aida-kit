@@ -1,2 +1,31 @@
 @import './../../../App.scss';
 
+.leftNot {
+    position: absolute;
+    top: -150px;
+    left: -15px;
+    max-width: 400px;
+}
+
+.rightNot {
+    position: absolute;
+    top: -150px;
+    right: 5px;
+    z-index: 100;
+    max-width: 400px;
+}
+
+.topNot {
+    position: absolute;
+    top: -150px;
+    right: 5px;
+    z-index: 100;
+    width: 100%;
+}
+
+.boxHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}

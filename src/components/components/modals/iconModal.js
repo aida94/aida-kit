@@ -30,7 +30,7 @@ class IconModal extends Component {
                 <h5 className='mt-4 text-primary' id='exampleModalLabel'><i className='fa fa-cog'></i></h5>
               </div>
               <div className='modal-body'>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson cred nesciunt sapiente ea proident.
               </div>
               <div className='row mb-3 d-flex justify-content-end'> 
                 <button type='button' className='btn btn-secondary mr-2' data-dismiss='modal' onClick={handleHide}>Close</button>
