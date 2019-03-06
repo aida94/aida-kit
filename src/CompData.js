@@ -11,9 +11,8 @@ import Dropdowns from './components/components/dropdowns/dropdowns';
 import Forms from './components/components/forms/forms';
 import Modals from './components/components/modals/modals';
 import Notifications from './components/components/notifications/notifications';
-import Panels from './components/components/panels/panels';
+import PanelsTabs from './components/components/panels&tabs/panels&tabs';
 import Tables from './components/components/tables/tables';
-import Tabs from './components/components/tabs/tabs';
 import Tpp from './components/components/tool&prog&pop/tpp';
 
 
@@ -116,12 +115,12 @@ const CompData = [
     main: () => <Notifications/>,
   },
   {
-    path: '/panels',
+    path: '/panelsTabs',
     exact: false,
-    name: 'Panels',
+    name: 'Panels & Tabs',
     icon: 'fa fa-user',
     showComponent: true,
-    main: () => <Panels/>,
+    main: () => <PanelsTabs />,
   },
   {
     path: '/tables',
@@ -130,14 +129,6 @@ const CompData = [
     icon: 'fa fa-user',
     showComponent: true,
     main: () => <Tables/>,
-  },
-  {
-    path: '/tabs',
-    exact: false,
-    name: 'Tabs',
-    icon: 'fa fa-user',
-    showComponent: true,
-    main: () => <Tabs/>,
   },
   {
     path: '/other',

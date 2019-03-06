@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-
+import LineChart from './lineChart';
+import BarChart from './barChart';
+import PieChart from './pieChart';
+import DoughnutChart from './doughnutChart';
+import PolarChart from './polarChart';
+import RadarChart from './radarChart';
 
 class Charts extends Component {
   render() {
@@ -12,15 +17,47 @@ class Charts extends Component {
           <div className='row'>
             <div className='col-md-6 mb-5'>
               <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Default Charts</p>
-
+                <p className='font-weight-bold'>Line Chart</p>
+                <LineChart />
               </div>
             </div>
             
             <div className='col-md-6 mb-5'>
               <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Color Charts with Icons</p>
+                <p className='font-weight-bold'>Bar Chart</p>
+                <BarChart />
+              </div>
+            </div>
+          </div>
 
+          <div className='row'>
+            <div className='col-md-6 mb-5'>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
+                <p className='font-weight-bold'>Pie Chart</p>
+                <PieChart />
+              </div>
+            </div>
+            
+            <div className='col-md-6 mb-5'>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
+                <p className='font-weight-bold'>Doughnut </p>
+                <DoughnutChart />
+              </div>
+            </div>
+          </div>
+
+          <div className='row'>
+            <div className='col-md-6 mb-5'>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
+                <p className='font-weight-bold'>Polar Area Chart</p>
+                <PolarChart />
+              </div>
+            </div>
+            
+            <div className='col-md-6 mb-5'>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
+                <p className='font-weight-bold'>Radar Chart</p>
+                <RadarChart />
               </div>
             </div>
           </div>
