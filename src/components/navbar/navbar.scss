@@ -16,20 +16,22 @@
 
 // toggle icon
   i.fa.togBtn {
-    display: inline-block;
+    display: table-cell;
+    position: relative;
     border-radius: 30px;
-    width:40px;
-    height: 40px;
+    width:35px;
+    height: 35px;
     padding: 0.5em 0.4em;
     margin-right: 10px;
     background-color: $success ;
     color: white;
-    
+    text-align: center;
+    font-size:18px; 
   }
   
   i.fa.togBtn:hover {
-    width:42px;
-    height: 42px;
+    width:41px;
+    height: 41px;
     background-color: $successdark;
     cursor:pointer;
   }

@@ -51,9 +51,9 @@ class Sidebar extends Component {
     let componentIconToggle = '';
     if (routes.length > 0) {
       if (!this.state.componentDrp) {
-        componentIconToggle = 'fa fa-angle-right';
+        componentIconToggle = 'fa fa-angle-right faSidebar';
       } else {
-        componentIconToggle = 'fa fa-angle-down';
+        componentIconToggle = 'fa fa-angle-down faSidebar';
       }
     } else {
       componentIconToggle = 'fa';
@@ -68,7 +68,7 @@ class Sidebar extends Component {
             <ul>
               <li className='sidemenu mt-4'>
                 <NavLink exact to='/' activeStyle={{ backgroundColor: lightgray, width: '200px' }}>  
-                  <i className='fa fa-home' />
+                  <i className='fa fa-home faSidebar' />
                   <span className='nav-text'>
                       Dashboard
                   </span>
@@ -77,7 +77,7 @@ class Sidebar extends Component {
 
               <li className='sidemenu' onClick={this.handleComponentDrp} ref={this.toggleRef} >
                 <NavLink to='#' > 
-                  <i className='fa fa-list' />
+                  <i className='fa fa-list faSidebar' />
                   <span className='nav-text'>
                     Components
                   </span>
@@ -109,7 +109,7 @@ class Sidebar extends Component {
               </li>
               <li className='sidemenu'>
                 <NavLink to='/utilities' activeStyle={{ backgroundColor: lightgray, width: '200px' }}> 
-                  <i className='fa fa-folder-open' />
+                  <i className='fa fa-folder-open faSidebar' />
                   <span className='nav-text'>
                     Utilities
                   </span>
@@ -117,7 +117,7 @@ class Sidebar extends Component {
               </li>
               <li className='sidemenu'>
                 <NavLink to='/documentation' activeStyle={{ backgroundColor: lightgray, width: '200px' }}> 
-                  <i className='fa fa-info' />
+                  <i className='fa fa-info faSidebar' />
                   <span className='nav-text'>
                     Documentation
                   </span>
@@ -128,7 +128,7 @@ class Sidebar extends Component {
             <ul className='logout'>
               <li>
               <NavLink to='/login' activeStyle={{ backgroundColor: lightgray, width: '200px' }}> 
-                <i className='fa fa-power-off' />
+                <i className='fa fa-power-off faSidebar' />
                 <span className='nav-text'>
                   Log out
                 </span>
