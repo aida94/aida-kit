@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Tooltip from './tooltip';
 import Progress from './progress';
+import Popover from './popover';
 
 class Tpp extends Component {
   render() {
@@ -27,7 +28,8 @@ class Tpp extends Component {
                 <h5 className='font-weight-bold'>Popover</h5>
                 <p>lorem lorem ipsakjk leijfeifn</p>
                 <div className='bg-white rounded p-2 p-md-3 mr-md-4'>
-                  <p className='font-weight-bold'>Tooltip</p>
+                  <p className='font-weight-bold'>Popover</p>
+                  <Popover/>
                 </div>
               </div>
             </div>

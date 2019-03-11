@@ -1,2 +1,189 @@
 @import './../../../App.scss';
 
+
+// tooltip
+.toolTip {
+    position: relative;
+    display: inline-block;
+  }
+
+  // tooltip top 
+  .toolTip .toolT {
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  // tooltip top 
+  .toolTip .tooltipTop {
+    bottom: 120%;
+    left: 10%;
+    // margin-left: -60px;
+  }
+
+  .toolTip .tooltipTop::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    // margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+
+  // tooltip bottom
+  .toolTip .tooltipBottom {
+    bottom: -120%;
+    left: 15%;
+    // margin-left: -60px;
+  }
+  
+  .toolTip .tooltipBottom::after {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: 40%;
+    // margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+
+  // tooltip right
+  .toolTip .tooltipRight {
+    bottom: 0%;
+    left: 106%;
+    // margin-left: 0px;
+  }
+
+  .toolTip .tooltipRight::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: -10%;
+    // margin-left: -10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+  }
+
+
+  .toolTip .tooltipLeft {
+    bottom: 0%;
+    left: -90%;
+    // margin-left: 0px;
+  }
+
+  .toolTip .tooltipLeft::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 100%;
+    // margin-left: -10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+  }
+  
+
+  .toolTip:hover .tooltipTop, .toolTip:hover .tooltipRight, .toolTip:hover .tooltipBottom, .toolTip:hover .tooltipLeft {
+    visibility: visible;
+  }
+
+  
+
+  // popover
+  .popOver {
+    position: relative;
+    display: inline-block;
+  }
+
+  .popOver .cardPop{
+    visibility: hidden;
+    background-color: #fff;
+    color: black;
+    min-width: 0;
+    text-align: center;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    z-index: 1;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+  }
+
+  .popOver .cardPop::after {
+    content: "";
+    position: absolute;
+    border-width: 6px;
+    border-style: solid ;
+  }
+
+  .popOver .popTop{
+    bottom: 100%;
+    left: 10%;
+  }
+  .popOver .popTop::after {
+    top: 100%;
+    left: 40%;
+    border-color: rgba(0, 0, 0, 0.3) transparent transparent transparent;
+  }
+
+  .popOver .popLeft{
+    bottom: -30%;
+    left: -85%;
+  }
+  .popOver .popLeft::after {
+    top: 40%;
+    left: 100%;
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.3);
+  }
+
+  .popOver .popBottom{
+    left: 10%;
+  }
+  .popOver .popBottom::after {
+    top: -15%;
+    left: 40%;
+    border-color: transparent transparent rgba(0, 0, 0, 0.3)  transparent;
+  }
+
+  .popOver .popRight{
+    bottom: -30%;
+    left: 100%;
+  }
+  .popOver .popRight::after {
+    top: 40%;
+    left: -13%;
+    border-color: transparent rgba(0, 0, 0, 0.3) transparent transparent;
+  }
+
+
+  .popOver:hover .cardPop {
+    z-index: 10;
+    visibility: visible;
+  }
+
+    .headerPop {
+    padding: 0.35rem 1rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+  .bodyPop {
+    position: relative;
+    display: block;
+    padding: 0.55rem 0.55rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
