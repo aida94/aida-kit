@@ -6,11 +6,11 @@ const data = {
   datasets: [
     {
       label: 'My First dataset',
-      backgroundColor: 'rgba(255,99,132,0.2)',
-      borderColor: 'rgba(255,99,132,1)',
+      backgroundColor: '#FF6384',
+      borderColor: '#FF6384',
       borderWidth: 1,
-      hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-      hoverBorderColor: 'rgba(255,99,132,1)',
+      hoverBackgroundColor: '#FF6384',
+      hoverBorderColor: '#FF6384',
       data: [65, 59, 80, 81, 56, 55, 40],
     },
   ],
