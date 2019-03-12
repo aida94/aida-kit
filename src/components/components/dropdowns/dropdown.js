@@ -60,7 +60,7 @@ class Dropdown extends Component {
           {this.props.text}
         </button>
         <div className={`dropdown-menu ${show}`}>
-            <input autoFocus className={`mx-3 my-2 w-auto ${search}`} placeholder="Type to filter..." onChange={this.handleChange} />
+            <input autoFocus className={`mx-3 my-2 w-auto ${search}`} placeholder='Type to filter...' onChange={this.handleChange} />
             {menuElement.map((elem, index) => (
                 <div key={index} className='dropdown-item'>{elem}</div>
             ))}

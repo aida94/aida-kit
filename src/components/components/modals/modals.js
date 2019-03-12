@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './modals.scss';
 import DefaultModal from './defaultModal';
 import IconModal from './iconModal';
 import FormModal from './formModal';
