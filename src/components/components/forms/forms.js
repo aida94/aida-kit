@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import FormBasic from './formbasic';
+import FormWizard from './formWizard';
+import WizardForm from './wizardForm';
+
+import './forms.scss';
 
 
 class Forms extends Component {
@@ -20,16 +24,8 @@ class Forms extends Component {
 
             <div className='col-md-6 mb-5'>
               <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>DATE PICKER</p>
-                
-              </div>
-            </div>
-          </div>
-
-          <div className='row'>            
-            <div className='col-md-12 mb-5'>
-              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
                 <p className='font-weight-bold'>Wizard form</p>
+                <WizardForm/>
               </div>
             </div>
           </div>

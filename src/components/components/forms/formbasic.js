@@ -66,67 +66,67 @@ class FormBasic extends Component {
           <form onSubmit={handleSubmit}>
 
             <div className='row' >
-                <div className="col-md-6 form-group">
-                    <label htmlFor="text">Text Field</label><small className='text-danger'> * </small>
-                    <input type="text" name="text" className="form-control form-control-sm" id="text" placeholder="Text Input" value={values.text} onChange={handleChange} onBlur={handleBlur}/>
-                    <ErrorMessage name="text" component="div" className='text-danger'/>
+                <div className='col-md-6 form-group'>
+                    <label htmlFor='text'>Text Field</label><small className='text-danger'> * </small>
+                    <input type='text' name='text' className='form-control form-control-sm' id='text' placeholder='Text Input' value={values.text} onChange={handleChange} onBlur={handleBlur}/>
+                    <ErrorMessage name='text' component='div' className='text-danger'/>
                 </div>
-                <div className="col-md-3 form-group">
-                    <label htmlFor="disabled">Disabled Field</label>
-                    <input type="text" name="disabled" className="form-control form-control-sm" id="disabled" placeholder="Disabled Input" disabled/>
+                <div className='col-md-3 form-group'>
+                    <label htmlFor='disabled'>Disabled Field</label>
+                    <input type='text' name='disabled' className='form-control form-control-sm' id='disabled' placeholder='Disabled Input' disabled/>
                 </div>
             </div>
 
         
-            <div className="row" >
-                <div className="col-md-6 form-group">
-                    <label htmlFor="email">E-mail</label> <small className='text-danger'> * </small>
-                    <input type="email" name="email" className="form-control form-control-sm" id="email" placeholder="example@gmail.com" value={values.email} onChange={handleChange} onBlur={handleBlur}/>
-                    <ErrorMessage name="email" component="div" className='text-danger'/>
+            <div className='row' >
+                <div className='col-md-6 form-group'>
+                    <label htmlFor='email'>E-mail</label> <small className='text-danger'> * </small>
+                    <input type='email' name='email' className='form-control form-control-sm' id='email' placeholder='example@gmail.com' value={values.email} onChange={handleChange} onBlur={handleBlur}/>
+                    <ErrorMessage name='email' component='div' className='text-danger'/>
                 </div>
-                <div className="col-md-6 form-group">
-                    <label htmlFor="password">Password</label> <small className='text-danger'> * </small>
-                    <input type="password" name="password" className="form-control form-control-sm" id="password" placeholder="Password" value={values.password} onChange={handleChange} onBlur={handleBlur}/>
-                    <ErrorMessage name="password" component="div" className='text-danger'/>
+                <div className='col-md-6 form-group'>
+                    <label htmlFor='password'>Password</label> <small className='text-danger'> * </small>
+                    <input type='password' name='password' className='form-control form-control-sm' id='password' placeholder='Password' value={values.password} onChange={handleChange} onBlur={handleBlur}/>
+                    <ErrorMessage name='password' component='div' className='text-danger'/>
                 </div>
             </div>
 
-            <div className="row" >
-                <div className="col-md-6 form-group">
-                    <label htmlFor="iconLeft">Icon Left</label>
-                    <div className="input-group">
-                        <div className="input-group-prepend">
-                            <div className="input-group-text">@</div>
+            <div className='row' >
+                <div className='col-md-6 form-group'>
+                    <label htmlFor='iconLeft'>Icon Left</label>
+                    <div className='input-group'>
+                        <div className='input-group-prepend'>
+                            <div className='input-group-text'>@</div>
                         </div>
-                        <input type="text" name="iconLeft" className="form-control" id="iconLeft" placeholder="Icon Left Input" value={values.iconLeft} onChange={handleChange} onBlur={handleBlur}/>
+                        <input type='text' name='iconLeft' className='form-control' id='iconLeft' placeholder='Icon Left Input' value={values.iconLeft} onChange={handleChange} onBlur={handleBlur}/>
                     </div>
                 </div>
 
-                <div className="col-md-6 form-group">
-                    <label htmlFor="iconRight">Icon Right</label>
-                    <div className="input-group">
-                        <input type="text" name="iconRight" className="form-control" id="iconRight" placeholder="Input Right Input" value={values.iconRight} onChange={handleChange} onBlur={handleBlur}/>
-                        <div className="input-group-prepend">
-                            <div className="input-group-text">@</div>
+                <div className='col-md-6 form-group'>
+                    <label htmlFor='iconRight'>Icon Right</label>
+                    <div className='input-group'>
+                        <input type='text' name='iconRight' className='form-control' id='iconRight' placeholder='Input Right Input' value={values.iconRight} onChange={handleChange} onBlur={handleBlur}/>
+                        <div className='input-group-prepend'>
+                            <div className='input-group-text'>@</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="form-group">
-                <label htmlFor="description">Field with description</label>
-                <input type="text" name="description" className="form-control form-control-sm" id="description" placeholder="Enter info" aria-describedby="textHelp" value={values.description} onChange={handleChange} onBlur={handleBlur}/>
-                <small id="textHelp" className="form-text text-muted">Add some discription about text you will input.</small>
+            <div className='form-group'>
+                <label htmlFor='description'>Field with description</label>
+                <input type='text' name='description' className='form-control form-control-sm' id='description' placeholder='Enter info' aria-describedby='textHelp' value={values.description} onChange={handleChange} onBlur={handleBlur}/>
+                <small id='textHelp' className='form-text text-muted'>Add some discription about text you will input.</small>
             </div>
 
-            <div className="form-group">
-                <label htmlFor="textare">Textarea</label>
-                <textarea name="textarea" className="form-control form-control-sm" id="textare" rows="3" value={values.textarea} onChange={handleChange} onBlur={handleBlur}/>
+            <div className='form-group'>
+                <label htmlFor='textare'>Textarea</label>
+                <textarea name='textarea' className='form-control form-control-sm' id='textare' rows='3' value={values.textarea} onChange={handleChange} onBlur={handleBlur}/>
             </div>
 
-            <div className="form-group">
-                <label htmlFor="dropdown">Dropdown</label>
-                <select name="dropdown" className="form-control form-control-sm" id="dropdown" value={values.dropdown} onChange={handleChange} onBlur={handleBlur}>
+            <div className='form-group'>
+                <label htmlFor='dropdown'>Dropdown</label>
+                <select name='dropdown' className='form-control form-control-sm' id='dropdown' value={values.dropdown} onChange={handleChange} onBlur={handleBlur}>
                     <option defaultValue hidden>Choose value</option>
                     <option>1</option>
                     <option>2</option>
@@ -134,9 +134,9 @@ class FormBasic extends Component {
                 </select>
             </div>
 {/* 
-            <div className="form-group">
-                <label htmlFor="multiselect">Multiselect</label>
-                <select multiple name="multiselect" className="form-control form-control-sm" id="multiselect" value={values.multiselect} onChange={handleChange} onBlur={handleBlur}>
+            <div className='form-group'>
+                <label htmlFor='multiselect'>Multiselect</label>
+                <select multiple name='multiselect' className='form-control form-control-sm' id='multiselect' value={values.multiselect} onChange={handleChange} onBlur={handleBlur}>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -144,25 +144,25 @@ class FormBasic extends Component {
                 </select>
             </div> */}
 
-            <div className="form-group">
-                <label htmlFor="addFile">Add file</label>
-                <input type="file" name="file" className="form-control-file form-control-sm" id="addFile" value={values.file} onChange={handleChange} onBlur={handleBlur}/>
+            <div className='form-group'>
+                <label htmlFor='addFile'>Add file</label>
+                <input type='file' name='file' className='form-control-file form-control-sm' id='addFile' value={values.file} onChange={handleChange} onBlur={handleBlur}/>
             </div>
 
-            <div className="row">
-                <div className="col-md-6 form-group custom-control custom-checkbox">
-                    <input type="checkbox" className="custom-control-input" id="checkbox" value={values.checkbox} onChange={handleChange} onBlur={handleBlur}/>
-                    <label className="custom-control-label" htmlFor="checkbox">Check me out</label> <small className='text-danger'> * </small>
-                    <ErrorMessage name="checkbox" component="div" className='text-danger'/>
+            <div className='row'>
+                <div className='col-md-6 form-group custom-control custom-checkbox'>
+                    <input type='checkbox' className='custom-control-input' id='checkbox' value={values.checkbox} onChange={handleChange} onBlur={handleBlur}/>
+                    <label className='custom-control-label' htmlFor='checkbox'>Check me out</label> <small className='text-danger'> * </small>
+                    <ErrorMessage name='checkbox' component='div' className='text-danger'/>
                 </div>
 
-                <div className="col-md-6 form-group custom-control custom-switch">
-                    <input type="checkbox" className="custom-control-input" id="switch" value={values.switch} onChange={handleChange} onBlur={handleBlur}/>
-                    <label className="custom-control-label" htmlFor="switch">Toggle this switch element</label>
+                <div className='col-md-6 form-group custom-control custom-switch'>
+                    <input type='checkbox' className='custom-control-input' id='switch' value={values.switch} onChange={handleChange} onBlur={handleBlur}/>
+                    <label className='custom-control-label' htmlFor='switch'>Toggle this switch element</label>
                 </div>
             </div>
 
-            <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+            <button type='submit' className='btn btn-primary' disabled={isSubmitting}>
                 Submit
             </button>
           </form>);

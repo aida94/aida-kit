@@ -15,25 +15,31 @@ class FormModal extends Component {
   }
 
   handleUserInput = (e) => {
-    const { name } = e.target;
-    const { value } = e.target;
+    const { name, value } = e.target;
     this.setState({ [name]: value },
       () => { this.validateField(name, value); });
   }
 
   validateField(fieldName, value) {
     const fieldValidationErrors = this.state.formErrors;
-    let { emailValid } = this.state;
-    let { passwordValid } = this.state;
+    let { emailValid, passwordValid } = this.state;
 
     switch (fieldName) {
       case 'email':
-        emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-        fieldValidationErrors.email = emailValid ? '' : ' is invalid';
+        if (!value.length > 0) {
+          fieldValidationErrors.email = ' is required';
+        } else {
+          emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+          fieldValidationErrors.email = emailValid ? '' : ' is invalid';
+        }
         break;
       case 'password':
-        passwordValid = value.length >= 6;
-        fieldValidationErrors.password = passwordValid ? '' : ' is too short';
+        if (!value.length > 0) {
+          fieldValidationErrors.password = ' is required';
+        } else {
+          passwordValid = value.length >= 6;
+          fieldValidationErrors.password = passwordValid ? '' : ' is too short';
+        }
         break;
       default:
         break;
@@ -82,19 +88,19 @@ class FormModal extends Component {
 
                   <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
                     <label htmlFor='email' className='col-form-label'>Email</label>
-                    <input type='email' name='email' className='form-control' id='email' value={this.state.email} onBlur={this.handleInputBlur} onChange={this.handleUserInput} required/>
+                    <input type='email' name='email' className='form-control' id='email' value={this.state.email} onBlur={this.handleUserInput} onChange={this.handleUserInput} required/>
                     {this.state.formErrors.email.length > 0 && (
                       <div className='formErrors'>
-                        <p>email is invalid</p>
+                        <p>email {this.state.formErrors.email}</p>
                       </div> 
                     )}
                   </div>
                   <div className={`form-group ${this.errorClass(this.state.formErrors.password)}`}>
                     <label htmlFor='password' className='col-form-label'>Password</label>
-                    <input type='password' name='password' className='form-control' id='password' value={this.state.password} onBlur={this.handleInputBlur} onChange={this.handleUserInput} required/>
+                    <input type='password' name='password' className='form-control' id='password' value={this.state.password} onBlur={this.handleUserInput} onChange={this.handleUserInput} required/>
                     {this.state.formErrors.password.length > 0 && (
                       <div className='formErrors'>
-                        <p>password is short</p>
+                        <p>password {this.state.formErrors.password}</p>
                       </div> 
                     )}
                   </div>
