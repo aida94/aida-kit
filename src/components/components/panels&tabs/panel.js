@@ -24,17 +24,17 @@ class Panel extends Component {
     const hide = this.state.hide ? 'd-none' : '';
     const minimum = this.state.minimum ? 'd-none' : '';
     return (
-      <div className={`col-md-6 mb-5 ${hide}`}>
+      <div className={`${this.props.classDiv} ${hide}`}>
         <div className={this.props.classHeader}>
-          <p className='pt-2'>Default Panels 
+          <p className='pt-2'> {this.props.headerText}
             <span className='float-right'>
               <i className='fa fa-minus mr-3' onClick={this.handleMinimum}></i>
               <i className='fa fa-times mr-3' onClick={this.handleHide}></i>
             </span>
           </p>
         </div>
-        <div className={`bg-white rounded-bottom p-2 mr-md-4 ${minimum} `}>
-          <p className=''>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+        <div className={`${this.props.classBody} ${minimum} `}>
+          {this.props.children}
         </div>
       </div>
     );

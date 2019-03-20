@@ -19,12 +19,11 @@ class Collapse extends Component {
     let iconToggle = this.props.icon;
 
     if (this.state.collapse) {
-      if (iconToggle.indexOf('fa-plus') >= 0) {
-        iconToggle = iconToggle.replace('fa-plus', 'fa-minus');
-      } else if (iconToggle.indexOf('fa-angle-down') >= 0) {
-        iconToggle = iconToggle.replace('fa-angle-down', 'fa-angle-up');
-      }
-    }    
+      iconToggle += this.props.iconCollapse;
+    } else {
+      iconToggle += this.props.iconNotCollapse;
+    }
+
 
     return (
 

@@ -88,15 +88,17 @@ class Alerts extends Component {
     ];
 
     return (
-      <div className='' id='alerts'>
+      <div className='text-secondary' id='alerts'>
         <section className='mx-3 mt-1 mb-4'>
           <h3>Alerts</h3>
-          <p>Use this elements, if you want to show some hints or additional primaryrmation</p>
+          <p>Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
 
           <div className='row'>
             <div className='col-md-6 mb-5'>
-              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Default Alerts</p>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4 shadow'>
+                <p className='font-weight-bold'>Basic Alerts <br/>
+                  <small>Basic configuration of alert</small>
+                </p>
                   {colorAlert.map((obj, index) => (
                     <Alert key={index} className={obj.class}>
                       This is a '{obj.name}' !
@@ -106,8 +108,10 @@ class Alerts extends Component {
             </div>
             
             <div className='col-md-6 mb-5'>
-              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Color Alerts with Icons</p>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4 shadow'>
+                <p className='font-weight-bold'>Basic Alerts with Icons <br/>
+                  <small>Use basic alert with icon</small>
+                </p>
                   {colorAlert.map((obj, index) => (
                     <Alert key={index} className={obj.class}>
                       <i className={obj.icon}></i> 
@@ -120,8 +124,10 @@ class Alerts extends Component {
 
           <div className='row'>
             <div className='col-md-6 mb-5'>
-              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Border Alerts with Icons</p>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4 shadow'>
+                <p className='font-weight-bold'>Border Alerts with Icons <br/>
+                  <small>Use alert with icons and border colored.</small>
+                </p>
                   {borderIcon.map((obj, index) => (
                     <Alert key={index} className={obj.class}>
                       <i className={obj.icon}></i> 
@@ -132,8 +138,10 @@ class Alerts extends Component {
             </div>
             
             <div className='col-md-6 mb-5'>
-              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Neutral Alerts with Icons</p>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4 shadow'>
+                <p className='font-weight-bold'>Neutral Alerts with Icons<br/>
+                  <small>Use  neutral alert with icons and border colored.</small>
+                </p>
                   {neutralColor.map((obj, index) => (
                     <Alert key={index} className={obj.class}>
                       <i className={obj.icon}></i> 

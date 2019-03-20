@@ -59,15 +59,17 @@ class Buttons extends Component {
 
     return (
 
-      <div className='' id='alerts'>
+      <div className='text-secondary' id='alerts'>
         <section className='mx-3 mt-1 mb-4'>
           <h3>Buttons</h3>
-          <p>Use this elements, if you want to show some hints or additional information</p>
+          <p>Provide different class to custom button styles like color, size and more.</p>
 
           <div className='row'>
             <div className='col-md-6 mb-5'>
-              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Default Buttons</p>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4 shadow'>
+                <p className='font-weight-bold'>Default Buttons<br/>
+                  <small>Use default button with necessary values of properties color and outline</small>
+                </p>
                   {basic.map((basic, index) => (
                     <Button key={index} className={basic.class}>
                       {basic.name}
@@ -77,8 +79,10 @@ class Buttons extends Component {
             </div>
             
             <div className='col-md-6 mb-5'>
-              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Button Icons</p>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4 shadow'>
+                <p className='font-weight-bold'>Button Icons<br/>
+                  <small>Use default button with icons</small>
+                </p>
                   {basic.slice(0, 5).map((basic, index) => (
                     <Button key={index} className={`${basic.class}`}>
                       <i className={basic.icon}></i>
@@ -91,8 +95,10 @@ class Buttons extends Component {
 
           <div className='row'>
             <div className='col-md-6 mb-5'>
-              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Square Buttons</p>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4 shadow'>
+                <p className='font-weight-bold'>Square Buttons<br/>
+                  <small>Change shape of button square</small>
+                </p>
                   {basic.map((basic, index) => (
                     <Button key={index} className={`${basic.class} squarebtn`}>
                       {basic.name}
@@ -102,8 +108,10 @@ class Buttons extends Component {
             </div>
             
             <div className='col-md-6 mb-5'>
-              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Rounded Buttons</p>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4 shadow'>
+                <p className='font-weight-bold'>Rounded Buttons<br/>
+                  <small>Change shape of button rounded-pill</small>
+                </p>
                   {basic.map((basic, index) => (
                     <Button key={index} className={`${basic.class} rounded-pill`}>
                       {basic.name}
@@ -115,8 +123,10 @@ class Buttons extends Component {
 
           <div className='row'>
             <div className='col-12 mb-5'>
-              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Small buttons</p>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4 shadow'>
+                <p className='font-weight-bold'>Small buttons<br/>
+                  <small>Change size of button btn-sm</small>
+                </p>
                   {basic.map((basic, index) => (
                     <Button key={index} className={`${basic.class}  btn-sm`}>
                       {basic.name}
@@ -126,8 +136,10 @@ class Buttons extends Component {
             </div>
             
             <div className='col-12'>
-              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Large buttons</p>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4 shadow'>
+                <p className='font-weight-bold'>Large buttons<br/>
+                  <small>Change size of button btn-lg</small>
+                </p>
                   {basic.map((basic, index) => (
                     <Button key={index} className={`${basic.class} btn-lg`}>
                       {basic.name}

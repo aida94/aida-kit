@@ -55,7 +55,7 @@ class Dropdown extends Component {
     const search = this.props.search ? '' : 'd-none';
     return (
 
-      <div className={this.props.class} ref={this.menuRef}>
+      <div className={this.props.className} ref={this.menuRef}>
         <button className='btn btn-secondary dropdown-toggle' data-toggle='dropdown' onClick={this.handleShow} >
           {this.props.text}
         </button>

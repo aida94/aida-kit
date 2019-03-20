@@ -9,10 +9,10 @@ import RadarChart from './radarChart';
 class Charts extends Component {
   render() {
     return (
-      <div className='' id='charts'>
+      <div className='text-secondary' id='charts'>
         <section className='mx-3 mt-1 mb-4'>
           <h3>Charts</h3>
-          <p>Use this elements, if you want to show some hints or additional primaryrmation</p>
+          <p>Mix charts to provide a clear visual distinction between datasets.</p>
 
           <div className='row'>
             <div className='col-md-6 mb-5'>

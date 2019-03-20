@@ -116,15 +116,15 @@ class Tables extends Component {
 
   render() {
     return (
-      <div className='' id='tables'>
+      <div className='text-secondary' id='tables'>
         <section className='mx-3 mt-1 mb-4'>
           <h3>Tables</h3>
-          <p>Use this elements, if you want to show some hints or additional primaryrmation</p>
+          <p>Multifunctional table using react-bootstrap-table library </p>
 
           <div className='row'>
             <div className='col-md-12 mb-5'>
-              <div className='bg-white rounded p-2 p-md-5 mr-md-4'>
-                <p className='font-weight-bold'>Default Tables</p>
+              <div className='bg-white rounded p-2 p-md-5 mr-md-4 shadow'>
+                <p className='font-weight-bold'>Default Table</p>
 
                 {/* <a className='btn btn-primary' onClick={ this.handlerClickCleanFiltered.bind(this) } style={ { cursor: 'pointer' } }>clear filters</a> */}
                   <BootstrapTable ref='table' data={products} options={this.options} pagination striped hover condensed selectRow={ selectRowProp } insertRow deleteRow exportCSV search={ true } cellEdit={ cellEditProp } keyBoardNav>

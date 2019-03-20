@@ -149,7 +149,7 @@ class FormBasic extends Component {
                 <input type='file' name='file' className='form-control-file form-control-sm' id='addFile' value={values.file} onChange={handleChange} onBlur={handleBlur}/>
             </div>
 
-            <div className='row'>
+            <div className='row ml-2'>
                 <div className='col-md-6 form-group custom-control custom-checkbox'>
                     <input type='checkbox' className='custom-control-input' id='checkbox' value={values.checkbox} onChange={handleChange} onBlur={handleBlur}/>
                     <label className='custom-control-label' htmlFor='checkbox'>Check me out</label> <small className='text-danger'> * </small>

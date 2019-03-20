@@ -156,6 +156,15 @@
     border-color: transparent transparent rgba(0, 0, 0, 0.3)  transparent;
   }
 
+  .popOver .popDash{
+    left: 10%;
+  }
+  .popOver .popDash::after {
+    top: -15%;
+    left: 40%;
+    border-color: transparent transparent transparent  transparent;
+  }
+
   .popOver .popRight{
     bottom: -30%;
     left: 100%;

@@ -18,7 +18,7 @@ class IconModal extends Component {
 
     return (
 
-      <div>
+      <div className='text-dark'>
         <button type='button' className='btn text-white btn-primary' data-toggle='modal' data-target='#exampleModal' onClick={handleShow}>
           Launch modal
         </button>

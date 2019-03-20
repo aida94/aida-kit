@@ -4,7 +4,7 @@ class Utilities extends Component {
   render() {
     return (
 
-      <div className='' id='utilities'>
+      <div className='text-secondary' id='utilities'>
         <section className='mx-3 mt-1 mb-4' id='border'>
           <h3>Border</h3>
           <p>Use border utilities to quickly style the border and border-radius of an element. Some classes to use for borders</p>
@@ -152,8 +152,8 @@ class Utilities extends Component {
 
             <p className='font-weight-bold'>Text wrapping</p>  
             <div className=''>
-              <p className='text-wrap bg-secondary mx-2 ' style={{ width: '8rem' }}> This text is text-wrap</p>
-              <p className='text-nowrap bg-secondary mx-2 ' style={{ width: '8rem' }}> This text is text-nowrap</p>
+              <p className='text-wrap bg-primary mx-2 ' style={{ width: '8rem' }}> This text is text-wrap</p>
+              <p className='text-nowrap bg-primary mx-2 ' style={{ width: '8rem' }}> This text is text-nowrap</p>
             </div>
 
             <p className='font-weight-bold'>Text editing</p>  
