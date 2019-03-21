@@ -13,7 +13,7 @@ class Documentation extends Component {
             <div className='bg-white rounded p-2 p-md-5 mr-md-4 shadow'>
               <h5>INTRODUCTION</h5>
               <p className='mb-5'>
-                KitApp is a simple dashboard template based on React Components and Bootstrap 4 Framework. 
+                Aida Kit is a simple dashboard template based on React Components and Bootstrap 4 Framework. 
                 This is my first app in React and I tried to keep it simple. 
                 I built some components based on famous Bootstrap components and utilities trying to make them interactive.
                 There are a lot of other components coming ...

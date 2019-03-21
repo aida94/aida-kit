@@ -56,7 +56,7 @@ class Navbar extends Component {
 
       <nav className='navbar navbar-expand-lg navbar-light bg-light' id='tobar'>
         <i className={toggleIcon} onClick={this.handleToggleBar} />
-        <a className='navbar-brand d-none d-lg-block text-secondary' href='#11'> KitApp</a>
+        <a className='navbar-brand d-none d-lg-block text-secondary' href='#11'> NavKit</a>
 
         <div className='navbar_right '>
           <ul className='navbar-nav'>
